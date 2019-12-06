@@ -88,33 +88,6 @@
     <Filter Include="Game\Heroes">
       <UniqueIdentifier>{84226123-3699-4e94-b017-98fba5c82553}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Game\Heroes\Wardens">
-      <UniqueIdentifier>{b99e4a18-f2a0-4bbc-b7b9-88fe8f86301d}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Game\Heroes\Warlords">
-      <UniqueIdentifier>{f5e19533-573d-4992-aa8b-494e0c77be33}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Game\Heroes\Duelists">
-      <UniqueIdentifier>{2b90365d-f909-4f19-8cdc-39bd6485b541}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Game\Heroes\Raiders">
-      <UniqueIdentifier>{aeb94b8e-38ba-4f35-ac08-b363f52b3a6f}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Game\Heroes\Nukers">
-      <UniqueIdentifier>{7c228206-8434-4132-a4f2-b63f66065266}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Game\Heroes\Controllers">
-      <UniqueIdentifier>{eaf83c8c-6626-4648-9a26-785e241f0dbf}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Game\Heroes\Assassins">
-      <UniqueIdentifier>{a652aacf-89ed-4daa-96a4-2832bca89d8f}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Game\Heroes\Marsmen">
-      <UniqueIdentifier>{a9508fda-9574-4528-b4ab-9f54b75b4f45}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Game\Heroes\Base Class">
-      <UniqueIdentifier>{80148396-215b-4db0-b261-06513ee62adf}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -262,7 +235,10 @@
       <Filter>Framework\Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Hero.cpp">
-      <Filter>Game\Heroes\Base Class</Filter>
+      <Filter>Game\Heroes</Filter>
+    </ClCompile>
+    <ClCompile Include="DataHandler.cpp">
+      <Filter>Framework\Handlers</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -416,11 +392,14 @@
     <ClInclude Include="PlayerAttributes.h">
       <Filter>Game\Actors</Filter>
     </ClInclude>
-    <ClInclude Include="Hero.h">
-      <Filter>Game\Heroes\Base Class</Filter>
-    </ClInclude>
     <ClInclude Include="HeroData.h">
-      <Filter>Game\Heroes\Base Class</Filter>
+      <Filter>Game\Heroes</Filter>
+    </ClInclude>
+    <ClInclude Include="Hero.h">
+      <Filter>Game\Heroes</Filter>
+    </ClInclude>
+    <ClInclude Include="DataHandler.h">
+      <Filter>Framework\Handlers</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -2,6 +2,8 @@
 #define HERODATA_H
 #include "Definitions.h"
 
+enum class HeroClasses {Assassin, Controller, Duelist, Enchanter, Marksman, Nuker, Raider, Warden, Warlord};
+
 /* Constants */
 const unsigned MaxInGameLevel = 20;
 const unsigned long long ExpLimit = 18446644073709551615;

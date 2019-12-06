@@ -3,7 +3,7 @@
 
 namespace Engine
 {
-	/* Instance to NULL */
+	/* instance to nullptr */
 	AssetsHandler* AssetsHandler::sInstance = nullptr;
 
 	/* Constructor / Destructor */

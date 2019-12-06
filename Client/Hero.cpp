@@ -63,6 +63,7 @@ void Hero::updateLevel()
 /* Constructor / Destructor */
 Hero::Hero()
 {
+	mID = 0;
 	mBanned = false;
 	mIsInGame = false;
 	mPriority = 0;

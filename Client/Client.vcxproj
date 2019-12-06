@@ -167,6 +167,7 @@
     <ClCompile Include="Collider.cpp" />
     <ClCompile Include="ConfirmationBox.cpp" />
     <ClCompile Include="Container.cpp" />
+    <ClCompile Include="DataHandler.cpp" />
     <ClCompile Include="DataStructures.cpp" />
     <ClCompile Include="DebugScene.cpp" />
     <ClCompile Include="DropDownList.cpp" />
@@ -224,6 +225,7 @@
     <ClInclude Include="ConfirmationBox.h" />
     <ClInclude Include="Constants.h" />
     <ClInclude Include="Container.h" />
+    <ClInclude Include="DataHandler.h" />
     <ClInclude Include="DataStructures.h" />
     <ClInclude Include="DebugScene.h" />
     <ClInclude Include="Definitions.h" />

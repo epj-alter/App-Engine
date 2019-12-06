@@ -4,7 +4,11 @@
 
 class Hero
 {
-protected:
+private:
+
+	/* Creation */
+	unsigned mID;
+	FILE* dFile;
 
 	/* Basic Info */
 	std::string mName;

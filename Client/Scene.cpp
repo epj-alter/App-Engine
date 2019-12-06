@@ -20,15 +20,15 @@ namespace Engine
 				char readBuffer[4000];
 				rapidjson::FileReadStream is(dFile, readBuffer, sizeof(readBuffer));
 				d.ParseStream(is);
-				const rapidjson::Value& text_array = d[mSceneName.c_str()];
+				const rapidjson::Value& key_array = d[mSceneName.c_str()];
 
-				for (int i = 0; i < text_array.Size(); i++)
+				for (int i = 0; i < key_array.Size(); i++)
 				{
-					mKeyMap[text_array[i]["action"].GetString()] = mSceneData->getKeyCode(text_array[i]["key"].GetString());
+					mKeyMap[key_array[i]["action"].GetString()] = mSceneData->getKeyCode(key_array[i]["key"].GetString());
 
-					if (mKeyMap.at(text_array[i]["action"].GetString()) == NULL)
+					if (mKeyMap.at(key_array[i]["action"].GetString()) == NULL)
 					{
-						printf("SCENE::initKeyMap Could not insert key '%s' into array\n", text_array[i]["key"].GetString());
+						printf("SCENE::initKeyMap Could not insert key '%s' into array\n", key_array[i]["key"].GetString());
 					}
 				}
 
