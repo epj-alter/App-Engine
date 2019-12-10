@@ -1,6 +1,7 @@
 #ifndef LOADERSCENE_H
 #define LOADERSCENE_H
 #include "Scene.h"
+#include "DataHandler.h"
 
 class LoaderScene : public Scene
 {

@@ -21,6 +21,7 @@ namespace Engine
 		PhysicsHandler* mPhysicsHandler;
 		SceneHandler* mSceneHandler;
 		StylesHandler* mStyle;
+		DataHandler* mDataHandler;
 
 		/* Various */
 		MessageBox* mMessageBox;

@@ -2,7 +2,7 @@
 #define HERODATA_H
 #include "Definitions.h"
 
-enum class HeroClasses {Assassin, Controller, Duelist, Enchanter, Marksman, Nuker, Raider, Warden, Warlord};
+enum class HeroClass {Assassin, Controller, Duelist, Enchanter, Marksman, Nuker, Raider, Warden, Warlord};
 
 /* Constants */
 const unsigned MaxInGameLevel = 20;
@@ -14,7 +14,7 @@ typedef struct PrimaryAttributes
 	unsigned Strength;
 	unsigned Constitution;
 	unsigned Intellect;
-	unsigned Mentallity;
+	unsigned Mentality;
 	unsigned Dexterity;
 	unsigned Lethality;
 };

@@ -4,14 +4,14 @@
 
 class Hero
 {
-private:
+protected:
 
 	/* Creation */
-	unsigned mID;
-	FILE* dFile;
+	std::string mID;
+	std::string mName;
+	HeroClass mClass;
 
 	/* Basic Info */
-	std::string mName;
 	unsigned mPriority;
 	bool mBanned;
 	bool mIsInGame;
@@ -44,6 +44,13 @@ public:
 
 	/* Constructor */
 	Hero();
+	Hero(std::string name, std::string id, unsigned priority, unsigned hero_class, 
+		unsigned strong1, unsigned strong2, unsigned strong3, unsigned weak1, unsigned weak2, unsigned weak3,
+		unsigned bstrength, unsigned bconstitution, unsigned bintellect, unsigned bmentality, unsigned bdexterity, unsigned blethality,
+		unsigned sstrength, unsigned sconstitution, unsigned sintellect, unsigned smentality, unsigned sdexterity, unsigned slethality,
+		unsigned aoe, unsigned burst, unsigned cc, unsigned mobility, unsigned range);
+
+	Hero(Hero* existing_hero);
 	~Hero(); // make virtual for abstract class
 
 	/* Accessors */

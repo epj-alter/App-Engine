@@ -6,6 +6,7 @@ namespace Engine
 	DebugScene::DebugScene()
 		: Scene("debug_scene", Scene::debug_scene)
 	{
+		mDataHandler = DataHandler::instance();
 		mPlayerBase = new PlayerBase(500);
 
 		//printf("ELO 1: %i \n", mTeam->getPerson(Engine::Selection::TOP)->getPlayerAttribute().ELO);
@@ -17,6 +18,8 @@ namespace Engine
 
 	DebugScene::~DebugScene()
 	{
+		mDataHandler = nullptr;
+
 		delete mLadderSimulation;
 		mLadderSimulation = nullptr;
 
