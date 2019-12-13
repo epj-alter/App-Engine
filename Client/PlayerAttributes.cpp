@@ -103,6 +103,11 @@ PlayerAttributes::~PlayerAttributes()
 {
 }
 
+const Progress PlayerAttributes::getProgressAtt() const
+{
+	return mProgressAtt;
+}
+
 /* Accessors */
 const Technical PlayerAttributes::getTechnicalAtt() const
 {

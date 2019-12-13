@@ -17,7 +17,7 @@ void LadderSimulation::createMatches(const unsigned min_ELO, const unsigned max_
 
 		for (auto& itr : mQueuedPlayers)
 		{
-			if (itr->getPlayerAttribute().ELO >= min_ELO && itr->getPlayerAttribute().ELO < max_ELO)
+			if (itr->getPlayerAttribute().getProgressAtt().ELO >= min_ELO && itr->getPlayerAttribute().getProgressAtt().ELO < max_ELO)
 			{
 				if (mSimulatedMatches.back()->addPlayer(itr, itr->queuedPosition()))
 				{

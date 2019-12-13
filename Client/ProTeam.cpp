@@ -51,7 +51,7 @@ void ProTeam::update()
 	for (auto& itr : mSquad)
 	{
 		player_count++;
-		total_ELO += itr->getPlayerAttribute().ELO;
+		total_ELO += itr->getPlayerAttribute().getProgressAtt().ELO;
 	}
 
 	mAvgELO = std::round(total_ELO / player_count);

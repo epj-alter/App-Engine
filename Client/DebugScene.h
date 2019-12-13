@@ -1,7 +1,6 @@
 #ifndef DEBUGSCENE_H
 #define DEBUGSCENE_H
 #include "LoaderScene.h"
-#include "LadderSimulation.h"
 
 namespace Engine
 {
@@ -9,6 +8,7 @@ namespace Engine
 	{
 	private:
 
+		DataHandler* mDataHandler;
 		LadderSimulation* mLadderSimulation;
 		PlayerBase* mPlayerBase;
 

@@ -2,7 +2,7 @@
 #define HERODATA_H
 #include "Definitions.h"
 
-enum class HeroClasses {Assassin, Controller, Duelist, Enchanter, Marksman, Nuker, Raider, Warden, Warlord};
+enum class HeroClass {Assassin, Controller, Duelist, Enchanter, Marksman, Nuker, Raider, Warden, Warlord};
 
 /* Constants */
 const unsigned MaxInGameLevel = 20;
@@ -14,7 +14,7 @@ typedef struct PrimaryAttributes
 	unsigned Strength;
 	unsigned Constitution;
 	unsigned Intellect;
-	unsigned Mentallity;
+	unsigned Mentality;
 	unsigned Dexterity;
 	unsigned Lethality;
 };
@@ -56,7 +56,7 @@ typedef struct InGameStats
 
 	unsigned Level = 1;
 	unsigned CurrentExp = 0;
-	unsigned NextLvlExp = static_cast<unsigned long long int>((50 / 3)* (pow(Level, 3) - 6 * pow(Level, 2) + ((double(Level) * 17)) - 12));
+	unsigned NextLvlExp = static_cast<unsigned>((50 / 3)* (pow(Level, 3) - 6 * pow(Level, 2) + ((double(Level) * 17)) - 12));
 
 };
 

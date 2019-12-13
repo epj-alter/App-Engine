@@ -45,6 +45,7 @@ namespace Engine
 		mPhysicsHandler = PhysicsHandler::instance();
 		mSceneHandler = SceneHandler::instance();
 		mStyle = StylesHandler::instance();
+		mDataHandler = DataHandler::instance();
 
 
 		mEvent = &mInputHandler->getEvent();
@@ -64,6 +65,9 @@ namespace Engine
 	{
 		delete mConfirmExitBox;
 		mConfirmExitBox = nullptr;
+
+		DataHandler::release();
+		mDataHandler = nullptr;
 
 		StylesHandler::release();
 		mStyle = nullptr;

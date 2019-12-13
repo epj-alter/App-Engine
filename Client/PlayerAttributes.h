@@ -28,6 +28,7 @@ public:
 	~PlayerAttributes();
 
 	/* Accessors */
+	const Progress getProgressAtt() const;
 	const Technical getTechnicalAtt() const;
 	const Mental getMentalAtt() const;
 	const Personality getPersonalityAtt() const;
