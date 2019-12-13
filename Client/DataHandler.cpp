@@ -19,27 +19,27 @@ namespace Engine
 				char readBuffer[4000];
 				rapidjson::FileReadStream is(dFile, readBuffer, sizeof(readBuffer));
 				d.ParseStream(is);
-				const rapidjson::Value& heroes_array = d["Heroes"];
+				const rapidjson::Value& heroes = d["Heroes"];
 
-				for (int i = 0; i < heroes_array.Size(); i++)
+				for (int i = 0; i < heroes.Size(); i++)
 				{
-					mHeroes.insert({heroes_array[i]["id"].GetString(),
+					mHeroes.insert({heroes[i]["id"].GetString(),
 						new Hero(
-							heroes_array[i]["name"].GetString(), heroes_array[i]["id"].GetString(), 
-							heroes_array[i]["priority"].GetUint(), heroes_array[i]["class"].GetUint(),
-							heroes_array[i]["strong1"].GetUint(), heroes_array[i]["strong2"].GetUint(), heroes_array[i]["strong3"].GetUint(),
-							heroes_array[i]["weak1"].GetUint(), heroes_array[i]["weak2"].GetUint(), heroes_array[i]["weak3"].GetUint(),
-							heroes_array[i]["bstrength"].GetUint(), heroes_array[i]["bconstitution"].GetUint(), heroes_array[i]["bintellect"].GetUint(),
-							heroes_array[i]["bmentality"].GetUint(), heroes_array[i]["bdexterity"].GetUint(), heroes_array[i]["blethality"].GetUint(),
-							heroes_array[i]["sstrength"].GetUint(), heroes_array[i]["sconstitution"].GetUint(), heroes_array[i]["sintellect"].GetUint(),
-							heroes_array[i]["smentality"].GetUint(), heroes_array[i]["sdexterity"].GetUint(), heroes_array[i]["slethality"].GetUint(),
-							heroes_array[i]["aoe"].GetUint(), heroes_array[i]["burst"].GetUint(), heroes_array[i]["cc"].GetUint(),
-							heroes_array[i]["mobility"].GetUint(), heroes_array[i]["range"].GetUint()
+							heroes[i]["name"].GetString(), heroes[i]["id"].GetString(), 
+							heroes[i]["priority"].GetUint(), heroes[i]["class"].GetUint(),
+							heroes[i]["strong1"].GetUint(), heroes[i]["strong2"].GetUint(), heroes[i]["strong3"].GetUint(),
+							heroes[i]["weak1"].GetUint(), heroes[i]["weak2"].GetUint(), heroes[i]["weak3"].GetUint(),
+							heroes[i]["bstrength"].GetUint(), heroes[i]["bconstitution"].GetUint(), heroes[i]["bintellect"].GetUint(),
+							heroes[i]["bmentality"].GetUint(), heroes[i]["bdexterity"].GetUint(), heroes[i]["blethality"].GetUint(),
+							heroes[i]["sstrength"].GetUint(), heroes[i]["sconstitution"].GetUint(), heroes[i]["sintellect"].GetUint(),
+							heroes[i]["smentality"].GetUint(), heroes[i]["sdexterity"].GetUint(), heroes[i]["slethality"].GetUint(),
+							heroes[i]["aoe"].GetUint(), heroes[i]["burst"].GetUint(), heroes[i]["cc"].GetUint(),
+							heroes[i]["mobility"].GetUint(), heroes[i]["range"].GetUint()
 							)});
 
-					if (mHeroes.at(heroes_array[i]["id"].GetString()) == nullptr)
+					if (mHeroes.at(heroes[i]["id"].GetString()) == nullptr)
 					{
-						printf("DATAHANDLER::initHeroes Could not load hero '%s' into array\n", heroes_array[i]["id"].GetString());
+						printf("DATAHANDLER::initHeroes Could not load hero '%s' into array\n", heroes[i]["id"].GetString());
 					}
 				}
 

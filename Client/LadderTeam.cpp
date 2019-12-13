@@ -59,7 +59,7 @@ void LadderTeam::update()
 		for (auto& itr : mPlayers)
 		{
 			player_count++;
-			total_ELO += itr.second->getPlayerAttribute().ELO;
+			total_ELO += itr.second->getPlayerAttribute().getProgressAtt().ELO;
 		}
 
 		mAvgELO = std::round(total_ELO / player_count);

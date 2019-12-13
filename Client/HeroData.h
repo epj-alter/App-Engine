@@ -56,7 +56,7 @@ typedef struct InGameStats
 
 	unsigned Level = 1;
 	unsigned CurrentExp = 0;
-	unsigned NextLvlExp = static_cast<unsigned long long int>((50 / 3)* (pow(Level, 3) - 6 * pow(Level, 2) + ((double(Level) * 17)) - 12));
+	unsigned NextLvlExp = static_cast<unsigned>((50 / 3)* (pow(Level, 3) - 6 * pow(Level, 2) + ((double(Level) * 17)) - 12));
 
 };
 
