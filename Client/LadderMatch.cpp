@@ -3,12 +3,24 @@
 
 LadderMatch::LadderMatch()
 {
+	for (const auto& itr : *DataHandler::instance()->getHeroesDB())
+	{
+		mHeroesAvailale.insert({itr.second->getID(), new Hero(itr.second)});
+	}
+
 	mBlueTeam = new LadderTeam();
 	mRedTeam = new LadderTeam();
 }
 
 LadderMatch::~LadderMatch()
 {
+	for (auto& itr : mHeroesAvailale)
+	{
+		delete itr.second;
+		itr.second = nullptr;
+	}
+	mHeroesAvailale.clear();
+
 	delete mBlueTeam;
 	mBlueTeam = nullptr;
 
@@ -24,6 +36,16 @@ const bool LadderMatch::hasEnoughPlayers() const
 		return false;
 }
 
+const LadderTeam* LadderMatch::getBlueTeam() const
+{
+	return mBlueTeam;
+}
+
+const LadderTeam* LadderMatch::getRedTeam() const
+{
+	return mRedTeam;
+}
+
 /* Modifiers */
 const bool LadderMatch::addPlayer(Player* player, Position position)
 {
@@ -36,6 +58,10 @@ const bool LadderMatch::addPlayer(Player* player, Position position)
 		return false;
 		printf("Match Lobby is complete. \n");
 	}
+}
+
+void LadderMatch::pickAndBan()
+{
 }
 
 void LadderMatch::updateTeams()

@@ -10,6 +10,8 @@ LadderTeam::LadderTeam()
 LadderTeam::~LadderTeam()
 {
 	mPlayers.clear();
+	mBannedHeroes.clear();
+	mSelectedHeroes.clear();
 	printf("Team deleted \n");
 }
 
@@ -46,6 +48,28 @@ const bool LadderTeam::addPlayer(Player* player, Position position)
 		printf("Player Inserted at position %i\n", static_cast<int>(position));
 		return true;
 	}
+}
+
+void LadderTeam::banHero(Hero* hero, Position position)
+{
+	if (!hero->isBanned())
+	{
+		hero->setBanned(true);
+		mBannedHeroes.insert({ position, hero });
+	}
+	else
+		printf("Hero is already banned.\n");
+}
+
+void LadderTeam::selectHero(Hero* hero, Position position)
+{
+	if (!hero->isSelected())
+	{
+		hero->setSelected(true);
+		mSelectedHeroes.insert({ position, hero });
+	}
+	else
+		printf("Hero is already selected.\n");
 }
 
 /* Update */

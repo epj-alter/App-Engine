@@ -4,7 +4,10 @@
 /* Private Functions */
 void LadderSimulation::simulate()
 {
-
+	for (auto& match : mSimulatedMatches)
+	{
+		
+	}
 }
 
 void LadderSimulation::createMatches(const unsigned min_ELO, const unsigned max_ELO)
@@ -15,20 +18,20 @@ void LadderSimulation::createMatches(const unsigned min_ELO, const unsigned max_
 	{
 		mSimulatedMatches.push_back(new LadderMatch());
 
-		for (auto& itr : mQueuedPlayers)
+		for (auto& player : mQueuedPlayers)
 		{
-			if (itr->getPlayerAttribute().getProgressAtt().ELO >= min_ELO && itr->getPlayerAttribute().getProgressAtt().ELO < max_ELO)
+			if (player->getPlayerAttribute().getProgressAtt().ELO >= min_ELO && player->getPlayerAttribute().getProgressAtt().ELO < max_ELO)
 			{
-				if (mSimulatedMatches.back()->addPlayer(itr, itr->queuedPosition()))
+				if (mSimulatedMatches.back()->addPlayer(player, player->queuedPosition()))
 				{
-					itr->setQueueStatus(false);
+					player->setQueueStatus(false);
 					update();
 				}
 				else if (mSimulatedMatches.back()->hasEnoughPlayers())
 				{
 					break;
 				}
-				else if (itr->getID() == mQueuedPlayers.back()->getID())
+				else if (player->getID() == mQueuedPlayers.back()->getID())
 				{
 					if (!mSimulatedMatches.back()->hasEnoughPlayers())
 					{
@@ -39,7 +42,7 @@ void LadderSimulation::createMatches(const unsigned min_ELO, const unsigned max_
 					break;
 				}
 			}
-			else if (itr->getID() == mQueuedPlayers.back()->getID())
+			else if (player->getID() == mQueuedPlayers.back()->getID())
 			{
 				if (!mSimulatedMatches.back()->hasEnoughPlayers())
 				{
@@ -55,14 +58,14 @@ void LadderSimulation::createMatches(const unsigned min_ELO, const unsigned max_
 
 void LadderSimulation::update()
 {
-	mPlayerBase->shuffle();
+	DataHandler::instance()->shuffle();
 	mQueuedPlayers.clear();
 
-	for (const auto& itr : mPlayerBase->getPlayerBase())
+	for (const auto& player : *DataHandler::instance()->getPlayersDB())
 	{
-		if (itr->isQueuedUp())
+		if (player->isQueuedUp())
 		{
-			mQueuedPlayers.push_back(itr);
+			mQueuedPlayers.push_back(player);
 		}
 	}
 
@@ -70,10 +73,8 @@ void LadderSimulation::update()
 }
 
 /* Constructor / Destructor */
-LadderSimulation::LadderSimulation(PlayerBase* player_base)
+LadderSimulation::LadderSimulation()
 {
-	mPlayerBase = player_base;
-
 	update();
 
 	if (mQueuedPlayers.size() >= 5)
@@ -109,7 +110,5 @@ LadderSimulation::~LadderSimulation()
 	mSimulatedMatches.clear();
 
 	//mIterations.clear();
-
 	mQueuedPlayers.clear();
-	mPlayerBase = nullptr;
 }

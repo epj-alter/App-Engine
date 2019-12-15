@@ -6,10 +6,7 @@ class LadderSimulation : public Simulation
 {
 private:
 	
-	PlayerBase* mPlayerBase;
-	//std::map<unsigned, std::string> mIterations; // so it doesn't repeat an iteration
 	std::vector<Player*> mQueuedPlayers;
-	//std::map<std::string, Match*> mSimulatedMatches; //ID STUFF NOT YET
 	std::vector<LadderMatch*> mSimulatedMatches;
 
 	/* Private Functions */
@@ -20,7 +17,7 @@ private:
 public:
 
 	/* Constructor */
-	LadderSimulation(PlayerBase* player_base);
+	LadderSimulation();
 	~LadderSimulation();
 };
 

@@ -64,6 +64,7 @@ void Hero::updateLevel()
 Hero::Hero()
 {
 	mBanned = false;
+	mSelected = false;
 	mIsInGame = false;
 	mPriority = 0;
 
@@ -82,7 +83,7 @@ Hero::Hero()
 	mInGameStats.Level = 1;
 }
 
-Hero::Hero(std::string name, std::string id, unsigned priority, unsigned hero_class, 
+Hero::Hero(std::string name, unsigned id, unsigned priority, unsigned hero_class, 
 	unsigned strong1, unsigned strong2, unsigned strong3, unsigned weak1, unsigned weak2, unsigned weak3, 
 	unsigned bstrength, unsigned bconstitution, unsigned bintellect, unsigned bmentality, unsigned bdexterity, unsigned blethality, 
 	unsigned sstrength, unsigned sconstitution, unsigned sintellect, unsigned smentality, unsigned sdexterity, unsigned slethality, 
@@ -93,6 +94,7 @@ Hero::Hero(std::string name, std::string id, unsigned priority, unsigned hero_cl
 	mClass = static_cast<HeroClass>(hero_class);
 
 	mBanned = false;
+	mSelected = false;
 	mIsInGame = false;
 	mPriority = priority;
 
@@ -125,16 +127,59 @@ Hero::Hero(std::string name, std::string id, unsigned priority, unsigned hero_cl
 
 Hero::Hero(Hero* existing_hero)
 {
-	memcpy(existing_hero, this, sizeof(this));
+	mID = existing_hero->mID;
+	mName = existing_hero->mName;
+	mClass = existing_hero->mClass;
+
+	mBanned = existing_hero->mBanned;
+	mSelected = existing_hero->mSelected;
+	mIsInGame = existing_hero->mIsInGame;
+	mPriority = existing_hero->mPriority;
+
+	mPrimaryBase.Constitution = existing_hero->mPrimaryBase.Constitution;
+	mPrimaryBase.Dexterity = existing_hero->mPrimaryBase.Dexterity;
+	mPrimaryBase.Intellect = existing_hero->mPrimaryBase.Intellect;
+	mPrimaryBase.Lethality = existing_hero->mPrimaryBase.Lethality;
+	mPrimaryBase.Mentality = existing_hero->mPrimaryBase.Mentality;
+	mPrimaryBase.Strength = existing_hero->mPrimaryBase.Strength;
+
+	mPrimaryScaling.Constitution = existing_hero->mPrimaryScaling.Constitution;
+	mPrimaryScaling.Dexterity = existing_hero->mPrimaryScaling.Dexterity;
+	mPrimaryScaling.Intellect = existing_hero->mPrimaryScaling.Intellect;
+	mPrimaryScaling.Lethality = existing_hero->mPrimaryScaling.Lethality;
+	mPrimaryScaling.Mentality = existing_hero->mPrimaryScaling.Mentality;
+	mPrimaryScaling.Strength = existing_hero->mPrimaryScaling.Strength;
+
+	mIdentityAtt.AOE = existing_hero->mIdentityAtt.AOE;
+	mIdentityAtt.Burst = existing_hero->mIdentityAtt.Burst;
+	mIdentityAtt.CrowdControl = existing_hero->mIdentityAtt.CrowdControl;
+	mIdentityAtt.Mobility = existing_hero->mIdentityAtt.Mobility;
+	mIdentityAtt.Range = existing_hero->mIdentityAtt.Range;
+
+	mInGameStats = {};
+	mInGameStats.Level = 1;
+
+	calculateTotalAtt();
+	calculateOverall();
 }
 
 Hero::~Hero()
 {
 }
 
-const bool Hero::banned() const
+const unsigned Hero::getID() const
+{
+	return mID;
+}
+
+const bool Hero::isBanned() const
 {
 	return mBanned;
+}
+
+const bool Hero::isSelected() const
+{
+	return mSelected;
 }
 
 void Hero::setInGame(bool in_game)
@@ -145,6 +190,11 @@ void Hero::setInGame(bool in_game)
 void Hero::setBanned(bool banned)
 {
 	mBanned = banned;
+}
+
+void Hero::setSelected(bool selected)
+{
+	mSelected = selected;
 }
 
 /* Core Functions */

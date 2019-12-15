@@ -192,7 +192,6 @@
     <ClCompile Include="PhysicsHandler.cpp" />
     <ClCompile Include="PhysicsHelper.cpp" />
     <ClCompile Include="CheckButton.cpp" />
-    <ClCompile Include="PersonHandler.cpp" />
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="PlayerAttributes.cpp" />
     <ClCompile Include="ProgressBar.cpp" />
@@ -252,7 +251,6 @@
     <ClInclude Include="MathHelper.h" />
     <ClInclude Include="PhysicsHandler.h" />
     <ClInclude Include="CheckButton.h" />
-    <ClInclude Include="PersonHandler.h" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="PlayerAttributes.h" />
     <ClInclude Include="PlayerData.h" />

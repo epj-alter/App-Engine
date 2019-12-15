@@ -7,13 +7,13 @@ namespace Engine
 		: Scene("debug_scene", Scene::debug_scene)
 	{
 		mDataHandler = DataHandler::instance();
-		mPlayerBase = new PlayerBase(500);
+		mDataHandler->setDatabaseSize(500);
 
 		//printf("ELO 1: %i \n", mTeam->getPerson(Engine::Selection::TOP)->getPlayerAttribute().ELO);
 		//printf("ELO 2: %i \n", mTeam->getPerson(Engine::Selection::MIDDLE)->getPlayerAttribute().ELO);
 		//printf("TEAM ELO: %i \n", mTeam->getELO());
 
-		mLadderSimulation = new LadderSimulation(mPlayerBase);
+		mLadderSimulation = new LadderSimulation();
 	}
 
 	DebugScene::~DebugScene()
@@ -22,9 +22,6 @@ namespace Engine
 
 		delete mLadderSimulation;
 		mLadderSimulation = nullptr;
-
-		delete mPlayerBase;
-		mPlayerBase = nullptr;
 	}
 
 	/* Interface Functions */

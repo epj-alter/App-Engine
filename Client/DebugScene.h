@@ -10,7 +10,6 @@ namespace Engine
 
 		DataHandler* mDataHandler;
 		LadderSimulation* mLadderSimulation;
-		PlayerBase* mPlayerBase;
 
 	public:
 
