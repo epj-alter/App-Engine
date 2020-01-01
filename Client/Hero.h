@@ -61,8 +61,8 @@ public:
 
 	/* Modifiers */
 	void setInGame(bool in_game);
-	void setBanned(bool banned);
-	void setSelected(bool selected);
+	void ban();
+	void select();
 
 	/* Core Functions */
 	void update();

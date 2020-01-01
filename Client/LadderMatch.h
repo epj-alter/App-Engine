@@ -6,10 +6,12 @@ class LadderMatch : public Match
 {
 private:
 
-	std::map<unsigned, Hero*> mHeroesAvailale;
+	std::map<unsigned, Hero*> mAvailableHeroes;
 
 	LadderTeam* mBlueTeam;
 	LadderTeam* mRedTeam;
+
+	void pickAndBan();
 
 public:
 
@@ -27,8 +29,7 @@ public:
 	const bool addPlayer(Player* player, Position position);
 
 	/* Simulation */
-	void pickAndBan();
-
+	void simulate();
 
 	/* Core */
 	void updateTeams();

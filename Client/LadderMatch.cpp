@@ -1,25 +1,52 @@
 #include "stdafx.h"
 #include "LadderMatch.h"
 
+void LadderMatch::pickAndBan()
+{
+	// ban
+	mBlueTeam->banHero(Position::TOP);
+	mRedTeam->banHero(Position::TOP);
+	mRedTeam->banHero(Position::JUNGLE);
+	mBlueTeam->banHero(Position::JUNGLE);
+	mBlueTeam->banHero(Position::MIDDLE);
+	mRedTeam->banHero(Position::MIDDLE);
+	mRedTeam->banHero(Position::BOTTOM);
+	mBlueTeam->banHero(Position::BOTTOM);
+	mBlueTeam->banHero(Position::SUPPORT);
+	mRedTeam->banHero(Position::SUPPORT);
+	
+	// pick
+	mBlueTeam->selectHero(Position::TOP);
+	mRedTeam->selectHero(Position::TOP);
+	mRedTeam->selectHero(Position::JUNGLE);
+	mBlueTeam->selectHero(Position::JUNGLE);
+	mBlueTeam->selectHero(Position::MIDDLE);
+	mRedTeam->selectHero(Position::MIDDLE);
+	mRedTeam->selectHero(Position::BOTTOM);
+	mBlueTeam->selectHero(Position::BOTTOM);
+	mBlueTeam->selectHero(Position::SUPPORT);
+	mRedTeam->selectHero(Position::SUPPORT);
+}
+
 LadderMatch::LadderMatch()
 {
 	for (const auto& itr : *DataHandler::instance()->getHeroesDB())
 	{
-		mHeroesAvailale.insert({itr.second->getID(), new Hero(itr.second)});
+		mAvailableHeroes.insert({itr.second->getID(), new Hero(itr.second)});
 	}
 
-	mBlueTeam = new LadderTeam();
-	mRedTeam = new LadderTeam();
+	mBlueTeam = new LadderTeam(&mAvailableHeroes);
+	mRedTeam = new LadderTeam(&mAvailableHeroes);
 }
 
 LadderMatch::~LadderMatch()
 {
-	for (auto& itr : mHeroesAvailale)
+	for (auto& itr : mAvailableHeroes)
 	{
 		delete itr.second;
 		itr.second = nullptr;
 	}
-	mHeroesAvailale.clear();
+	mAvailableHeroes.clear();
 
 	delete mBlueTeam;
 	mBlueTeam = nullptr;
@@ -60,8 +87,9 @@ const bool LadderMatch::addPlayer(Player* player, Position position)
 	}
 }
 
-void LadderMatch::pickAndBan()
+void LadderMatch::simulate()
 {
+	pickAndBan();
 }
 
 void LadderMatch::updateTeams()

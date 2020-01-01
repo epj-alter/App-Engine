@@ -11,6 +11,8 @@ namespace Engine
 		DataHandler* mDataHandler;
 		LadderSimulation* mLadderSimulation;
 
+		void init();
+
 	public:
 
 		DebugScene();

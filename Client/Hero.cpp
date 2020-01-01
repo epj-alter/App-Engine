@@ -187,14 +187,14 @@ void Hero::setInGame(bool in_game)
 	mIsInGame = in_game;
 }
 
-void Hero::setBanned(bool banned)
+void Hero::ban()
 {
-	mBanned = banned;
+	mBanned = true;
 }
 
-void Hero::setSelected(bool selected)
+void Hero::select()
 {
-	mSelected = selected;
+	mSelected = true;
 }
 
 /* Core Functions */

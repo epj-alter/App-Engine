@@ -3,8 +3,8 @@
 
 namespace Engine
 {
-	DebugScene::DebugScene()
-		: Scene("debug_scene", Scene::debug_scene)
+	/* Private Functions */
+	void DebugScene::init()
 	{
 		mDataHandler = DataHandler::instance();
 		mDataHandler->setDatabaseSize(500);
@@ -14,6 +14,15 @@ namespace Engine
 		//printf("TEAM ELO: %i \n", mTeam->getELO());
 
 		mLadderSimulation = new LadderSimulation();
+	}
+
+	/* Constructor / Destructor */
+	DebugScene::DebugScene()
+		: Scene("debug_scene", Scene::debug_scene)
+	{
+		std::thread t1(&DebugScene::init, this);
+		t1.detach();
+		//t1.join(); waits for it to finish..
 	}
 
 	DebugScene::~DebugScene()

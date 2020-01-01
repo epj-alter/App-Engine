@@ -2,13 +2,16 @@
 #include "LadderTeam.h"
 
 /* Constructor / Destructor */
-LadderTeam::LadderTeam()
+LadderTeam::LadderTeam(std::map<unsigned, Hero*>* available_heroes)
 {
+	mAvailableHeroes = available_heroes;
+
 	printf("Team created. \n");
 }
 
 LadderTeam::~LadderTeam()
 {
+	mAvailableHeroes = nullptr;
 	mPlayers.clear();
 	mBannedHeroes.clear();
 	mSelectedHeroes.clear();
@@ -50,26 +53,104 @@ const bool LadderTeam::addPlayer(Player* player, Position position)
 	}
 }
 
-void LadderTeam::banHero(Hero* hero, Position position)
+void LadderTeam::banHero(Position position)
 {
-	if (!hero->isBanned())
+	std::vector<unsigned> player_heroes = mPlayers.at(position)->getHatedHeroesID();
+
+	bool success = false;
+	unsigned count = 0;
+
+	std::random_shuffle(player_heroes.begin(), player_heroes.end());
+
+	do
 	{
-		hero->setBanned(true);
-		mBannedHeroes.insert({ position, hero });
-	}
-	else
-		printf("Hero is already banned.\n");
+		if (!mAvailableHeroes->at(player_heroes.back())->isBanned())
+		{
+			mAvailableHeroes->at(player_heroes.back())->ban();
+			mBannedHeroes.insert({ position, mAvailableHeroes->at(player_heroes.back()) });
+
+			success = true;
+			printf("%i banned.\n", mAvailableHeroes->at(player_heroes.back())->getID());
+		}
+		else
+		{
+			if (count < 5)
+			{
+				count++;
+				std::random_shuffle(player_heroes.begin(), player_heroes.end());
+				printf("%i is already banned.\n", mAvailableHeroes->at(player_heroes.back())->getID());
+			}
+			else
+			{
+				unsigned id = rand() % 24 + 1001;
+				if (!mAvailableHeroes->at(id)->isBanned())
+				{
+					mAvailableHeroes->at(id)->ban();
+					mBannedHeroes.insert({ position, mAvailableHeroes->at(id) });
+					success = true;
+					printf("%i banned as a last resource.\n", mAvailableHeroes->at(id)->getID());
+				}
+			}
+		}
+
+	} while (success == false);
 }
 
-void LadderTeam::selectHero(Hero* hero, Position position)
+void LadderTeam::selectHero(Position position)
 {
-	if (!hero->isSelected())
+	std::vector<unsigned> player_heroes;
+	bool success = false;
+	unsigned count = 0;
+
+	for (const auto &itr : mPlayers.at(position)->getBestHeroesID())
 	{
-		hero->setSelected(true);
-		mSelectedHeroes.insert({ position, hero });
+		player_heroes.push_back(itr);
 	}
-	else
-		printf("Hero is already selected.\n");
+
+	for (const auto &itr : mPlayers.at(position)->getFavouriteHeroesID())
+	{
+		player_heroes.push_back(itr);
+	}
+
+	for (const auto &itr : mPlayers.at(position)->getHeroesToPractice())
+	{
+		player_heroes.push_back(itr);
+	}
+
+	std::random_shuffle(player_heroes.begin(), player_heroes.end());
+
+	do
+	{
+		if (!(mAvailableHeroes->at(player_heroes.back())->isBanned()) && !(mAvailableHeroes->at(player_heroes.back())->isSelected()))
+		{
+			mAvailableHeroes->at(player_heroes.back())->select();
+			mSelectedHeroes.insert({ position, mAvailableHeroes->at(player_heroes.back()) });
+
+			success = true;
+			printf("%i selected.\n", mAvailableHeroes->at(player_heroes.back())->getID());
+		}
+		else
+		{
+			if (count < 5)
+			{
+				count++;
+				std::random_shuffle(player_heroes.begin(), player_heroes.end());
+				printf("%i is already selected or banned banned.\n", mAvailableHeroes->at(player_heroes.back())->getID());
+			}
+			else
+			{
+				unsigned id = rand() % 24 + 1001;
+				if (!(mAvailableHeroes->at(id)->isBanned()) && !(mAvailableHeroes->at(id)->isSelected()))
+				{
+					mAvailableHeroes->at(id)->select();
+					mSelectedHeroes.insert({ position, mAvailableHeroes->at(id) });
+					success = true;
+					printf("%i selected as a last resource.\n", mAvailableHeroes->at(id)->getID());
+				}
+			}
+		}
+
+	} while (success == false);
 }
 
 /* Update */

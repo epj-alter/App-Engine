@@ -4,10 +4,12 @@
 /* Private Functions */
 void LadderSimulation::simulate()
 {
-	for (auto& match : mSimulatedMatches)
-	{
-		
-	}
+	//for (auto& match : mSimulatedMatches)
+	//{
+	//	match->simulate();
+	//}
+
+	mSimulatedMatches.back()->simulate();
 }
 
 void LadderSimulation::createMatches(const unsigned min_ELO, const unsigned max_ELO)
@@ -75,7 +77,11 @@ void LadderSimulation::update()
 /* Constructor / Destructor */
 LadderSimulation::LadderSimulation()
 {
+	printf("Updating player queues.\n");
+
 	update();
+
+	printf("Creating Matches. \n");
 
 	if (mQueuedPlayers.size() >= 5)
 	{
@@ -90,6 +96,8 @@ LadderSimulation::LadderSimulation()
 	else
 		printf("There are not enough players in Queue \n");
 
+	printf("Updating teams \n");
+
 	if (mSimulatedMatches.size() > 0)
 	{
 		for (auto& itr : mSimulatedMatches)
@@ -98,6 +106,10 @@ LadderSimulation::LadderSimulation()
 		}
 	}
 
+	printf("Simulating Matches. \n");
+
+	std::thread t1(&LadderSimulation::simulate, this); //???? //THREAD SUCCESSFULL?
+	t1.detach(); // DETATCH OR JOIN=?=???= join waits for the thread to be finished.
 }
 
 LadderSimulation::~LadderSimulation()
