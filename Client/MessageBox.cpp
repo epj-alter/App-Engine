@@ -73,7 +73,7 @@ namespace Engine
 		{
 			mButton->update();
 
-			if (mButton->getState() == Button::pressed || InputHandler::instance()->keyPressed(SDL_SCANCODE_RETURN))
+			if (mButton->getState() == Button::BUTTON_STATE::pressed || InputHandler::instance()->keyPressed(SDL_SCANCODE_RETURN))
 			{
 				mShow = false;
 			}

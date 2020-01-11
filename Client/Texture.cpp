@@ -135,9 +135,9 @@ namespace Engine
 			Vector2 position = VECT2_ZERO;
 
 			if (mParent == nullptr)
-				position = getCenter(own);
+				position = getCenter(SPACE::own);
 			else
-				position = getCenter(general);
+				position = getCenter(SPACE::general);
 
 			// this is for the future player class.
 			//static_cast<int>((position.x - mWidth * scale.x * 0.5f) - mGraphics->getCamera().x);  
@@ -148,7 +148,7 @@ namespace Engine
 			mRenderRect.w = static_cast<int>(mWidth * mScale.x);
 			mRenderRect.h = static_cast<int>(mHeight * mScale.y);
 
-			mGraphics->drawTexture(mTexture, (mClipped) ? &mClippedRect : nullptr, &mRenderRect, getRotation(general));
+			mGraphics->drawTexture(mTexture, (mClipped) ? &mClippedRect : nullptr, &mRenderRect, getRotation(SPACE::general));
 		}
 		else
 		{

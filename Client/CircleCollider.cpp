@@ -31,6 +31,6 @@ namespace Engine
 
 	Vector2 CircleCollider::getFurthestPoint() const
 	{
-		return VECT2_RIGHT * (mRadius + this->getCenter(GameEntity::own).Magnitude());
+		return VECT2_RIGHT * (mRadius + this->getCenter(GameEntity::SPACE::own).Magnitude());
 	}
 }

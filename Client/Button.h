@@ -8,7 +8,7 @@ namespace Engine
 	class Button : public Container
 	{
 	public:
-		enum BUTTON_STATE { idle, hovered, pressed };
+		enum class BUTTON_STATE { idle, hovered, pressed };
 
 	private:
 
@@ -43,7 +43,7 @@ namespace Engine
 		bool isSelected() const;
 
 		/* Modifiers */
-		void setLabel(std::string label, StylesHandler::FONT_MODIFIER size_mod = StylesHandler::medium, std::string font_path = "default");
+		void setLabel(std::string label, StylesHandler::FONT_MODIFIER size_mod = StylesHandler::FONT_MODIFIER::medium, std::string font_path = "default");
 
 		void setDisable();
 		void setSelected(bool select);

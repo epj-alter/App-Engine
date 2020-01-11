@@ -42,12 +42,12 @@ namespace Engine
 	{
 		if (!mSelected)
 		{
-			if (getBounds().contains(mInput->getMousePosition()) && mInput->mouseButtonPressed(mInput->left))
+			if (getBounds().contains(mInput->getMousePosition()) && mInput->mouseButtonPressed(InputHandler::MOUSE_BUTTONS::left))
 				mSelected = true;
 		}
 		else
 		{
-			if (mInput->mouseButtonReleased(mInput->left))
+			if (mInput->mouseButtonReleased(InputHandler::MOUSE_BUTTONS::left))
 				mSelected = false;
 	
 			mPercentage = (mInput->getMousePosition().x - mLeft) / mWidth * 100.f;

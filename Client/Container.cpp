@@ -56,7 +56,7 @@ namespace Engine
 
 	void Container::translate(Vector2 vec, SPACE space)
 	{
-		if (space == general)
+		if (space == SPACE::general)
 		{
 			mCenterPos += vec;
 			mLeft += static_cast<int>(vec.x);

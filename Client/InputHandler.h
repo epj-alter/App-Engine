@@ -7,7 +7,7 @@ namespace Engine
 	{
 	public:
 
-		enum MOUSE_BUTTONS { left = 0, right, middle, back, forward };
+		enum class MOUSE_BUTTONS { left, right, middle, back, forward };
 
 	private:
 

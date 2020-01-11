@@ -11,6 +11,8 @@ namespace Engine
 		DataHandler* mDataHandler;
 		LadderSimulation* mLadderSimulation;
 
+		Button* mButton1;
+
 		void init();
 
 	public:

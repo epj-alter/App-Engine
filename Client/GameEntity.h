@@ -8,7 +8,7 @@ namespace Engine
 	{
 	public:
 		/* Enums */
-		enum SPACE { own = 0, general };
+		enum class SPACE { own, general };
 
 	protected:
 		/* Core Variables*/
@@ -26,10 +26,10 @@ namespace Engine
 
 		/* Accessors */
 		GameEntity* getParent() const;
-		Vector2 getCenter(SPACE space = general) const;
-		Vector2 getScale(SPACE space = general) const;
-		float getRotation(SPACE space = general) const;
-		bool getActive(SPACE space = general) const;
+		Vector2 getCenter(SPACE space = SPACE::general) const;
+		Vector2 getScale(SPACE space = SPACE::general) const;
+		float getRotation(SPACE space = SPACE::general) const;
+		bool getActive(SPACE space = SPACE::general) const;
 
 		/* Modifiers */
 		void setParent(GameEntity* parent);
@@ -39,7 +39,7 @@ namespace Engine
 		void setActive(bool active);
 		void rotate(float amount);
 
-		virtual void translate(Vector2 vec, SPACE space = own);
+		virtual void translate(Vector2 vec, SPACE space = SPACE::own);
 
 		/* Core Functions */
 		virtual void update();

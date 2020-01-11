@@ -2,7 +2,7 @@
 #include "LoaderScene.h"
 
 LoaderScene::LoaderScene()
-	: Scene("load_scene", Scene::load_scene)
+	: Scene("load_scene", Scene::SCENE_ID::load_scene)
 {
 	mNumberofAssets = &mSceneData->getNumberOfAssets();
 	mAssetsLoadedCount = &mSceneData->getAssetsLoadedCount();

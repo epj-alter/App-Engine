@@ -18,8 +18,10 @@ namespace Engine
 
 	/* Constructor / Destructor */
 	DebugScene::DebugScene()
-		: Scene("debug_scene", Scene::debug_scene)
+		: Scene("debug_scene", SCENE_ID::debug_scene)
 	{
+		mButton1 = new Button(this, "Simulate", 100, 100, 100, 20);
+
 		std::thread t1(&DebugScene::init, this);
 		t1.detach();
 		//t1.join(); waits for it to finish..
@@ -27,6 +29,9 @@ namespace Engine
 
 	DebugScene::~DebugScene()
 	{
+		delete mButton1;
+		mButton1 = nullptr;
+
 		mDataHandler = nullptr;
 
 		delete mLadderSimulation;
@@ -36,11 +41,12 @@ namespace Engine
 	/* Interface Functions */
 	void DebugScene::updateInterface()
 	{
+		mButton1->update();
 	}
 
 	void DebugScene::renderInterface()
 	{
-		
+		mButton1->render();
 	}
 
 	/* Core Functions */

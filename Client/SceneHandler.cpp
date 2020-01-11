@@ -66,7 +66,7 @@ namespace Engine
 			{
 				switch (mScenes.top()->getID())
 				{
-				case Scene::load_scene:
+				case Scene::SCENE_ID::load_scene:
 
 					delete mScenes.top();
 					mScenes.top() = nullptr;
@@ -74,7 +74,7 @@ namespace Engine
 					mScenes.push(new DebugScene());
 					break;
 
-				case Scene::debug_scene:
+				case Scene::SCENE_ID::debug_scene:
 
 					delete mScenes.top();
 					mScenes.top() = nullptr;

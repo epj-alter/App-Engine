@@ -35,15 +35,15 @@ namespace Engine
 
 	Vector2 BoxCollider::getFurthestPoint() const
 	{
-		Vector2 local_pos = this->getCenter(GameEntity::own);
+		Vector2 local_pos = this->getCenter(GameEntity::SPACE::own);
 
 		int furthest_index = 0;
-		float distance = (local_pos + mVerts[0]->getCenter(GameEntity::own)).MagnitudeSqr();
+		float distance = (local_pos + mVerts[0]->getCenter(GameEntity::SPACE::own)).MagnitudeSqr();
 		float otherDist = 0.0f;
 
 		for (size_t i = 1; i < MAX_VERTS; i++)
 		{
-			otherDist = (local_pos + mVerts[i]->getCenter(GameEntity::own)).MagnitudeSqr();
+			otherDist = (local_pos + mVerts[i]->getCenter(GameEntity::SPACE::own)).MagnitudeSqr();
 			if (otherDist > distance)
 			{
 				furthest_index = i;
@@ -51,7 +51,7 @@ namespace Engine
 			}
 		}
 
-		return local_pos + mVerts[furthest_index]->getCenter(GameEntity::own);
+		return local_pos + mVerts[furthest_index]->getCenter(GameEntity::SPACE::own);
 	}
 	Vector2 BoxCollider::getVertexPosition(int index) const
 	{

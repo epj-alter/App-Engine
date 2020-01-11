@@ -127,19 +127,19 @@ namespace Engine
 
 		switch (size_mod)
 		{
-		case Engine::StylesHandler::x_small:
+		case Engine::StylesHandler::FONT_MODIFIER::x_small:
 			font_size = 8;
 			break;
-		case Engine::StylesHandler::small:
+		case Engine::StylesHandler::FONT_MODIFIER::small:
 			font_size = 10;
 			break;
-		case Engine::StylesHandler::medium:
+		case Engine::StylesHandler::FONT_MODIFIER::medium:
 			font_size = 14;
 			break;
-		case Engine::StylesHandler::large:
+		case Engine::StylesHandler::FONT_MODIFIER::large:
 			font_size = 24;
 			break;
-		case Engine::StylesHandler::x_large:
+		case Engine::StylesHandler::FONT_MODIFIER::x_large:
 			font_size = 48;
 			break;
 		}

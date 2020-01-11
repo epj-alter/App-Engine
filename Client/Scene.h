@@ -8,7 +8,7 @@ namespace Engine
 	class Scene : public GameEntity
 	{
 	public:
-		enum SCENE_ID { no_id, load_scene, debug_scene };
+		enum class SCENE_ID { no_id, load_scene, debug_scene };
 
 	protected:
 

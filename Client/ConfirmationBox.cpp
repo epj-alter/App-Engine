@@ -64,12 +64,12 @@ namespace Engine
 			mConfirm->update();
 			mDecline->update();
 
-			if (mConfirm->getState() == Button::pressed || InputHandler::instance()->keyPressed(SDL_SCANCODE_RETURN))
+			if (mConfirm->getState() == Button::BUTTON_STATE::pressed || InputHandler::instance()->keyPressed(SDL_SCANCODE_RETURN))
 			{
 				mShow = false;
 				mApply = true;
 			}
-			else if (mDecline->getState() == Button::pressed || InputHandler::instance()->keyPressed(SDL_SCANCODE_ESCAPE))
+			else if (mDecline->getState() == Button::BUTTON_STATE::pressed || InputHandler::instance()->keyPressed(SDL_SCANCODE_ESCAPE))
 			{
 				mShow = false;
 				mApply = false;
