@@ -73,18 +73,26 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <IncludePath>P:\Development\C++\Libraries\SDL2-2.0.10\include;P:\Development\C++\Libraries\SDL2_image-2.0.5\include;P:\Development\C++\Libraries\SDL2_ttf-2.0.15\include;$(IncludePath);P:\Development\C++\Libraries\SDL2_mixer-2.0.4\include</IncludePath>
     <LibraryPath>P:\Development\C++\Libraries\SDL2-2.0.10\lib\x86;P:\Development\C++\Libraries\SDL2_image-2.0.5\lib\x86;P:\Development\C++\Libraries\SDL2_ttf-2.0.15\lib\x86;$(LibraryPath);P:\Development\C++\Libraries\SDL2_mixer-2.0.4\lib\x86</LibraryPath>
+    <OutDir>$(SolutionDir)bin\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)bin\intermediates\$(Platform)\$(Configuration)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <IncludePath>C:\Development\SDL2-2.0.10\include;C:\Development\SDL2_image-2.0.5\include;P:\Development\C++\Libraries\SDL2_ttf-2.0.15\include;$(IncludePath);P:\Development\C++\Libraries\SDL2_mixer-2.0.4\include</IncludePath>
     <LibraryPath>C:\Development\SDL2-2.0.10\lib\x86;C:\Development\SDL2_image-2.0.5\lib\x86;P:\Development\C++\Libraries\SDL2_ttf-2.0.15\lib\x86;$(LibraryPath);P:\Development\C++\Libraries\SDL2_mixer-2.0.4\lib\x86</LibraryPath>
+    <OutDir>$(SolutionDir)bin\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)bin\intermediates\$(Platform)\$(Configuration)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <IncludePath>$(IncludePath)</IncludePath>
     <LibraryPath>$(LibraryPath)</LibraryPath>
+    <OutDir>$(SolutionDir)bin\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)bin\intermediates\$(Platform)\$(Configuration)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <IncludePath>$(IncludePath)</IncludePath>
     <LibraryPath>$(LibraryPath)</LibraryPath>
+    <OutDir>$(SolutionDir)bin\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)bin\intermediates\$(Platform)\$(Configuration)\</IntDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -92,13 +100,13 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>P:\Development\C++\Libraries\SDL2-2.0.10\include;P:\Development\C++\Libraries\SDL2_image-2.0.5\include;P:\Development\C++\Libraries\SDL2_mixer-2.0.4\include;P:\Development\C++\Libraries\SDL2_ttf-2.0.15\include;P:\Development\C++\Libraries\SDL2_net-2.0.1\include;P:\Development\C++\Libraries\rapidjson-master\include;P:\Development\C++\Libraries\lzo-2.10\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Dependencies\rapidjson-master\include\rapidjson;$(SolutionDir)Dependencies\SDL2_image-2.0.5\include;$(SolutionDir)Dependencies\SDL2_mixer-2.0.4\include;$(SolutionDir)Dependencies\SDL2_net-2.0.1\include;$(SolutionDir)Dependencies\SDL2_ttf-2.0.15\include;$(SolutionDir)Dependencies\SDL2-2.0.10\include</AdditionalIncludeDirectories>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <ShowIncludes>true</ShowIncludes>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
-      <AdditionalLibraryDirectories>P:\Development\C++\Libraries\SDL2-2.0.10\lib\x64;P:\Development\C++\Libraries\SDL2_net-2.0.1\lib\x64;P:\Development\C++\Libraries\SDL2_image-2.0.5\lib\x64;P:\Development\C++\Libraries\SDL2_mixer-2.0.4\lib\x64;P:\Development\C++\Libraries\SDL2_ttf-2.0.15\lib\x64</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(SolutionDir)Dependencies\SDL2-2.0.10\lib\x86;$(SolutionDir)Dependencies\SDL2_net-2.0.1\lib\x86;$(SolutionDir)Dependencies\SDL2_image-2.0.5\lib\x86;$(SolutionDir)Dependencies\SDL2_mixer-2.0.4\lib\x86;$(SolutionDir)Dependencies\SDL2_ttf-2.0.15\lib\x86</AdditionalLibraryDirectories>
       <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;SDL2_mixer.lib;SDL2_ttf.lib;SDL2_net.lib</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
@@ -108,14 +116,14 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>P:\Development\C++\Libraries\SDL2-2.0.10\include;P:\Development\C++\Libraries\SDL2_image-2.0.5\include;P:\Development\C++\Libraries\SDL2_mixer-2.0.4\include;P:\Development\C++\Libraries\SDL2_ttf-2.0.15\include;P:\Development\C++\Libraries\SDL2_net-2.0.1\include;P:\Development\C++\Libraries\rapidjson-master\include;P:\Development\C++\Libraries\lzo-2.10\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Dependencies\rapidjson-master\include\rapidjson;$(SolutionDir)Dependencies\SDL2_image-2.0.5\include;$(SolutionDir)Dependencies\SDL2_mixer-2.0.4\include;$(SolutionDir)Dependencies\SDL2_net-2.0.1\include;$(SolutionDir)Dependencies\SDL2_ttf-2.0.15\include;$(SolutionDir)Dependencies\SDL2-2.0.10\include</AdditionalIncludeDirectories>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <ShowIncludes>true</ShowIncludes>
       <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
-      <AdditionalLibraryDirectories>P:\Development\C++\Libraries\SDL2-2.0.10\lib\x64;P:\Development\C++\Libraries\SDL2_net-2.0.1\lib\x64;P:\Development\C++\Libraries\SDL2_image-2.0.5\lib\x64;P:\Development\C++\Libraries\SDL2_mixer-2.0.4\lib\x64;P:\Development\C++\Libraries\SDL2_ttf-2.0.15\lib\x64</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(SolutionDir)Dependencies\SDL2-2.0.10\lib\x64;$(SolutionDir)Dependencies\SDL2_net-2.0.1\lib\x64;$(SolutionDir)Dependencies\SDL2_image-2.0.5\lib\x64;$(SolutionDir)Dependencies\SDL2_mixer-2.0.4\lib\x64;$(SolutionDir)Dependencies\SDL2_ttf-2.0.15\lib\x64</AdditionalLibraryDirectories>
       <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;SDL2_mixer.lib;SDL2_ttf.lib;SDL2_net.lib</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
@@ -127,7 +135,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>P:\Development\C++\Libraries\SDL2-2.0.10\include;P:\Development\C++\Libraries\SDL2_image-2.0.5\include;P:\Development\C++\Libraries\SDL2_mixer-2.0.4\include;P:\Development\C++\Libraries\SDL2_ttf-2.0.15\include;P:\Development\C++\Libraries\SDL2_net-2.0.1\include;P:\Development\C++\Libraries\rapidjson-master\include;P:\Development\C++\Libraries\lzo-2.10\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Dependencies\rapidjson-master\include\rapidjson;$(SolutionDir)Dependencies\SDL2_image-2.0.5\include;$(SolutionDir)Dependencies\SDL2_mixer-2.0.4\include;$(SolutionDir)Dependencies\SDL2_net-2.0.1\include;$(SolutionDir)Dependencies\SDL2_ttf-2.0.15\include;$(SolutionDir)Dependencies\SDL2-2.0.10\include</AdditionalIncludeDirectories>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <ShowIncludes>true</ShowIncludes>
     </ClCompile>
@@ -135,7 +143,7 @@
       <SubSystem>Console</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalLibraryDirectories>P:\Development\C++\Libraries\SDL2-2.0.10\lib\x64;P:\Development\C++\Libraries\SDL2_net-2.0.1\lib\x64;P:\Development\C++\Libraries\SDL2_image-2.0.5\lib\x64;P:\Development\C++\Libraries\SDL2_mixer-2.0.4\lib\x64;P:\Development\C++\Libraries\SDL2_ttf-2.0.15\lib\x64</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(SolutionDir)Dependencies\SDL2-2.0.10\lib\x86;$(SolutionDir)Dependencies\SDL2_net-2.0.1\lib\x86;$(SolutionDir)Dependencies\SDL2_image-2.0.5\lib\x86;$(SolutionDir)Dependencies\SDL2_mixer-2.0.4\lib\x86;$(SolutionDir)Dependencies\SDL2_ttf-2.0.15\lib\x86</AdditionalLibraryDirectories>
       <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;SDL2_mixer.lib;SDL2_ttf.lib;SDL2_net.lib</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
@@ -147,7 +155,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>P:\Development\C++\Libraries\SDL2-2.0.10\include;P:\Development\C++\Libraries\SDL2_image-2.0.5\include;P:\Development\C++\Libraries\SDL2_mixer-2.0.4\include;P:\Development\C++\Libraries\SDL2_ttf-2.0.15\include;P:\Development\C++\Libraries\SDL2_net-2.0.1\include;P:\Development\C++\Libraries\rapidjson-master\include;P:\Development\C++\Libraries\lzo-2.10\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Dependencies\rapidjson-master\include\rapidjson;$(SolutionDir)Dependencies\SDL2_image-2.0.5\include;$(SolutionDir)Dependencies\SDL2_mixer-2.0.4\include;$(SolutionDir)Dependencies\SDL2_net-2.0.1\include;$(SolutionDir)Dependencies\SDL2_ttf-2.0.15\include;$(SolutionDir)Dependencies\SDL2-2.0.10\include</AdditionalIncludeDirectories>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <ShowIncludes>true</ShowIncludes>
     </ClCompile>
@@ -155,7 +163,7 @@
       <SubSystem>Windows</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalLibraryDirectories>P:\Development\C++\Libraries\SDL2-2.0.10\lib\x64;P:\Development\C++\Libraries\SDL2_net-2.0.1\lib\x64;P:\Development\C++\Libraries\SDL2_image-2.0.5\lib\x64;P:\Development\C++\Libraries\SDL2_mixer-2.0.4\lib\x64;P:\Development\C++\Libraries\SDL2_ttf-2.0.15\lib\x64</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(SolutionDir)Dependencies\SDL2-2.0.10\lib\x64;$(SolutionDir)Dependencies\SDL2_net-2.0.1\lib\x64;$(SolutionDir)Dependencies\SDL2_image-2.0.5\lib\x64;$(SolutionDir)Dependencies\SDL2_mixer-2.0.4\lib\x64;$(SolutionDir)Dependencies\SDL2_ttf-2.0.15\lib\x64</AdditionalLibraryDirectories>
       <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;SDL2_mixer.lib;SDL2_ttf.lib;SDL2_net.lib</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>

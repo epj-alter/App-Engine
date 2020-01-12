@@ -29,10 +29,10 @@
 #include "SDL_mixer.h"
 
 /* JSON */
-#include "rapidjson/rapidjson.h"
-#include "rapidjson/stringbuffer.h"
-#include "rapidjson/filereadstream.h"
-#include "rapidjson/document.h"
+#include "rapidjson.h"
+#include "stringbuffer.h"
+#include "filereadstream.h"
+#include "document.h"
 
 /* Framework Headers */
 #include "Constants.h"
