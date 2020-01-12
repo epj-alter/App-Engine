@@ -87,310 +87,310 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp">
-      <Filter>Framework\Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="stdafx.cpp">
-      <Filter>Framework\Header Files</Filter>
-    </ClCompile>
-    <ClCompile Include="MathHelper.cpp">
-      <Filter>Framework\Auxiliar Classes</Filter>
-    </ClCompile>
-    <ClCompile Include="Texture.cpp">
+    <ClCompile Include="src\AnimatedTexture.cpp">
       <Filter>Framework\Entities\Textures</Filter>
     </ClCompile>
-    <ClCompile Include="Timer.cpp">
+    <ClCompile Include="src\AssetsHandler.cpp">
+      <Filter>Framework\Handlers</Filter>
+    </ClCompile>
+    <ClCompile Include="src\AudioHandler.cpp">
+      <Filter>Framework\Handlers</Filter>
+    </ClCompile>
+    <ClCompile Include="src\BezierPath.cpp">
       <Filter>Framework\Auxiliar Classes</Filter>
     </ClCompile>
-    <ClCompile Include="AnimatedTexture.cpp">
-      <Filter>Framework\Entities\Textures</Filter>
+    <ClCompile Include="src\BoxCollider.cpp">
+      <Filter>Framework\Physics\Colliders</Filter>
     </ClCompile>
-    <ClCompile Include="BezierPath.cpp">
+    <ClCompile Include="src\Button.cpp">
+      <Filter>Framework\Gui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\CheckButton.cpp">
+      <Filter>Framework\Gui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\CircleCollider.cpp">
+      <Filter>Framework\Physics\Colliders</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Collider.cpp">
+      <Filter>Framework\Physics\Colliders</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ConfirmationBox.cpp">
+      <Filter>Framework\Gui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Container.cpp">
+      <Filter>Framework\Gui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\DataHandler.cpp">
+      <Filter>Framework\Handlers</Filter>
+    </ClCompile>
+    <ClCompile Include="src\DataStructures.cpp">
       <Filter>Framework\Auxiliar Classes</Filter>
     </ClCompile>
-    <ClCompile Include="BoxCollider.cpp">
-      <Filter>Framework\Physics\Colliders</Filter>
-    </ClCompile>
-    <ClCompile Include="CircleCollider.cpp">
-      <Filter>Framework\Physics\Colliders</Filter>
-    </ClCompile>
-    <ClCompile Include="Collider.cpp">
-      <Filter>Framework\Physics\Colliders</Filter>
-    </ClCompile>
-    <ClCompile Include="GameObject.cpp">
-      <Filter>Framework\Entities\Objects</Filter>
-    </ClCompile>
-    <ClCompile Include="AssetsHandler.cpp">
-      <Filter>Framework\Handlers</Filter>
-    </ClCompile>
-    <ClCompile Include="AudioHandler.cpp">
-      <Filter>Framework\Handlers</Filter>
-    </ClCompile>
-    <ClCompile Include="InputHandler.cpp">
-      <Filter>Framework\Handlers</Filter>
-    </ClCompile>
-    <ClCompile Include="GameEntity.cpp">
-      <Filter>Framework\Entities\Src</Filter>
-    </ClCompile>
-    <ClCompile Include="PhysicsHandler.cpp">
-      <Filter>Framework\Physics\Src</Filter>
-    </ClCompile>
-    <ClCompile Include="PhysicsHelper.cpp">
-      <Filter>Framework\Physics\Src</Filter>
-    </ClCompile>
-    <ClCompile Include="Game.cpp">
-      <Filter>Framework\Source Files\Src</Filter>
-    </ClCompile>
-    <ClCompile Include="Scene.cpp">
-      <Filter>Framework\Scenes\Src</Filter>
-    </ClCompile>
-    <ClCompile Include="Graphics.cpp">
-      <Filter>Framework\Graphics\Src</Filter>
-    </ClCompile>
-    <ClCompile Include="GraphicSettings.cpp">
-      <Filter>Framework\Graphics\Settings</Filter>
-    </ClCompile>
-    <ClCompile Include="SceneHandler.cpp">
-      <Filter>Framework\Handlers</Filter>
-    </ClCompile>
-    <ClCompile Include="LoaderScene.cpp">
-      <Filter>Framework\Scenes\Debug</Filter>
-    </ClCompile>
-    <ClCompile Include="Shapes.cpp">
-      <Filter>Framework\Auxiliar Classes</Filter>
-    </ClCompile>
-    <ClCompile Include="Container.cpp">
-      <Filter>Framework\Gui</Filter>
-    </ClCompile>
-    <ClCompile Include="Button.cpp">
-      <Filter>Framework\Gui</Filter>
-    </ClCompile>
-    <ClCompile Include="CheckButton.cpp">
-      <Filter>Framework\Gui</Filter>
-    </ClCompile>
-    <ClCompile Include="DropDownList.cpp">
-      <Filter>Framework\Gui</Filter>
-    </ClCompile>
-    <ClCompile Include="InputField.cpp">
-      <Filter>Framework\Gui</Filter>
-    </ClCompile>
-    <ClCompile Include="ProgressBar.cpp">
-      <Filter>Framework\Gui</Filter>
-    </ClCompile>
-    <ClCompile Include="Slider.cpp">
-      <Filter>Framework\Gui</Filter>
-    </ClCompile>
-    <ClCompile Include="SceneData.cpp">
-      <Filter>Framework\Scenes\Src</Filter>
-    </ClCompile>
-    <ClCompile Include="MessageBox.cpp">
-      <Filter>Framework\Gui</Filter>
-    </ClCompile>
-    <ClCompile Include="ConfirmationBox.cpp">
-      <Filter>Framework\Gui</Filter>
-    </ClCompile>
-    <ClCompile Include="StylesHandler.cpp">
-      <Filter>Framework\Handlers</Filter>
-    </ClCompile>
-    <ClCompile Include="DebugScene.cpp">
+    <ClCompile Include="src\DebugScene.cpp">
       <Filter>Game\Scenes</Filter>
     </ClCompile>
-    <ClCompile Include="DataStructures.cpp">
-      <Filter>Framework\Auxiliar Classes</Filter>
+    <ClCompile Include="src\DropDownList.cpp">
+      <Filter>Framework\Gui</Filter>
     </ClCompile>
-    <ClCompile Include="Match.cpp">
-      <Filter>Game\Matches</Filter>
+    <ClCompile Include="src\Game.cpp">
+      <Filter>Framework\Source Files\Src</Filter>
     </ClCompile>
-    <ClCompile Include="Person.cpp">
-      <Filter>Game\Actors</Filter>
+    <ClCompile Include="src\GameEntity.cpp">
+      <Filter>Framework\Entities\Src</Filter>
     </ClCompile>
-    <ClCompile Include="Team.cpp">
-      <Filter>Game\Groups</Filter>
+    <ClCompile Include="src\GameObject.cpp">
+      <Filter>Framework\Entities\Objects</Filter>
     </ClCompile>
-    <ClCompile Include="Player.cpp">
-      <Filter>Game\Actors</Filter>
+    <ClCompile Include="src\Graphics.cpp">
+      <Filter>Framework\Graphics\Src</Filter>
     </ClCompile>
-    <ClCompile Include="Simulation.cpp">
-      <Filter>Game\Simulations</Filter>
+    <ClCompile Include="src\GraphicSettings.cpp">
+      <Filter>Framework\Graphics\Settings</Filter>
     </ClCompile>
-    <ClCompile Include="LadderSimulation.cpp">
-      <Filter>Game\Simulations</Filter>
-    </ClCompile>
-    <ClCompile Include="LadderMatch.cpp">
-      <Filter>Game\Matches</Filter>
-    </ClCompile>
-    <ClCompile Include="LadderTeam.cpp">
-      <Filter>Game\Groups</Filter>
-    </ClCompile>
-    <ClCompile Include="ProTeam.cpp">
-      <Filter>Game\Groups</Filter>
-    </ClCompile>
-    <ClCompile Include="PlayerAttributes.cpp">
-      <Filter>Framework\Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Hero.cpp">
+    <ClCompile Include="src\Hero.cpp">
       <Filter>Game\Heroes</Filter>
     </ClCompile>
-    <ClCompile Include="DataHandler.cpp">
+    <ClCompile Include="src\InputField.cpp">
+      <Filter>Framework\Gui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\InputHandler.cpp">
       <Filter>Framework\Handlers</Filter>
+    </ClCompile>
+    <ClCompile Include="src\LadderMatch.cpp">
+      <Filter>Game\Matches</Filter>
+    </ClCompile>
+    <ClCompile Include="src\LadderSimulation.cpp">
+      <Filter>Game\Simulations</Filter>
+    </ClCompile>
+    <ClCompile Include="src\LadderTeam.cpp">
+      <Filter>Game\Groups</Filter>
+    </ClCompile>
+    <ClCompile Include="src\LoaderScene.cpp">
+      <Filter>Framework\Scenes\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="src\main.cpp">
+      <Filter>Framework\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Match.cpp">
+      <Filter>Game\Matches</Filter>
+    </ClCompile>
+    <ClCompile Include="src\MathHelper.cpp">
+      <Filter>Framework\Auxiliar Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="src\MessageBox.cpp">
+      <Filter>Framework\Gui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Person.cpp">
+      <Filter>Game\Actors</Filter>
+    </ClCompile>
+    <ClCompile Include="src\PhysicsHandler.cpp">
+      <Filter>Framework\Physics\Src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\PhysicsHelper.cpp">
+      <Filter>Framework\Physics\Src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Player.cpp">
+      <Filter>Game\Actors</Filter>
+    </ClCompile>
+    <ClCompile Include="src\PlayerAttributes.cpp">
+      <Filter>Framework\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ProgressBar.cpp">
+      <Filter>Framework\Gui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ProTeam.cpp">
+      <Filter>Game\Groups</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Scene.cpp">
+      <Filter>Framework\Scenes\Src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\SceneData.cpp">
+      <Filter>Framework\Scenes\Src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\SceneHandler.cpp">
+      <Filter>Framework\Handlers</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Shapes.cpp">
+      <Filter>Framework\Auxiliar Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Simulation.cpp">
+      <Filter>Game\Simulations</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Slider.cpp">
+      <Filter>Framework\Gui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\stdafx.cpp">
+      <Filter>Framework\Header Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\StylesHandler.cpp">
+      <Filter>Framework\Handlers</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Team.cpp">
+      <Filter>Game\Groups</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Texture.cpp">
+      <Filter>Framework\Entities\Textures</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Timer.cpp">
+      <Filter>Framework\Auxiliar Classes</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="stdafx.h">
-      <Filter>Framework\Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="MathHelper.h">
-      <Filter>Framework\Auxiliar Classes</Filter>
-    </ClInclude>
-    <ClInclude Include="Texture.h">
+    <ClInclude Include="src\AnimatedTexture.h">
       <Filter>Framework\Entities\Textures</Filter>
     </ClInclude>
-    <ClInclude Include="Timer.h">
+    <ClInclude Include="src\AssetsHandler.h">
+      <Filter>Framework\Handlers</Filter>
+    </ClInclude>
+    <ClInclude Include="src\AudioHandler.h">
+      <Filter>Framework\Handlers</Filter>
+    </ClInclude>
+    <ClInclude Include="src\BezierPath.h">
       <Filter>Framework\Auxiliar Classes</Filter>
     </ClInclude>
-    <ClInclude Include="AnimatedTexture.h">
-      <Filter>Framework\Entities\Textures</Filter>
+    <ClInclude Include="src\BoxCollider.h">
+      <Filter>Framework\Physics\Colliders</Filter>
     </ClInclude>
-    <ClInclude Include="BezierPath.h">
+    <ClInclude Include="src\Button.h">
+      <Filter>Framework\Gui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\CheckButton.h">
+      <Filter>Framework\Gui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\CircleCollider.h">
+      <Filter>Framework\Physics\Colliders</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Collider.h">
+      <Filter>Framework\Physics\Colliders</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ConfirmationBox.h">
+      <Filter>Framework\Gui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Constants.h">
       <Filter>Framework\Auxiliar Classes</Filter>
     </ClInclude>
-    <ClInclude Include="BoxCollider.h">
-      <Filter>Framework\Physics\Colliders</Filter>
+    <ClInclude Include="src\Container.h">
+      <Filter>Framework\Gui</Filter>
     </ClInclude>
-    <ClInclude Include="CircleCollider.h">
-      <Filter>Framework\Physics\Colliders</Filter>
-    </ClInclude>
-    <ClInclude Include="Collider.h">
-      <Filter>Framework\Physics\Colliders</Filter>
-    </ClInclude>
-    <ClInclude Include="GameObject.h">
-      <Filter>Framework\Entities\Objects</Filter>
-    </ClInclude>
-    <ClInclude Include="AssetsHandler.h">
+    <ClInclude Include="src\DataHandler.h">
       <Filter>Framework\Handlers</Filter>
     </ClInclude>
-    <ClInclude Include="AudioHandler.h">
-      <Filter>Framework\Handlers</Filter>
-    </ClInclude>
-    <ClInclude Include="InputHandler.h">
-      <Filter>Framework\Handlers</Filter>
-    </ClInclude>
-    <ClInclude Include="GameEntity.h">
-      <Filter>Framework\Entities\Src</Filter>
-    </ClInclude>
-    <ClInclude Include="PhysicsHandler.h">
-      <Filter>Framework\Physics\Src</Filter>
-    </ClInclude>
-    <ClInclude Include="PhysicsHelper.h">
-      <Filter>Framework\Physics\Src</Filter>
-    </ClInclude>
-    <ClInclude Include="Game.h">
-      <Filter>Framework\Source Files\Src</Filter>
-    </ClInclude>
-    <ClInclude Include="Scene.h">
-      <Filter>Framework\Scenes\Src</Filter>
-    </ClInclude>
-    <ClInclude Include="Graphics.h">
-      <Filter>Framework\Graphics\Src</Filter>
-    </ClInclude>
-    <ClInclude Include="GraphicSettings.h">
-      <Filter>Framework\Graphics\Settings</Filter>
-    </ClInclude>
-    <ClInclude Include="SceneHandler.h">
-      <Filter>Framework\Handlers</Filter>
-    </ClInclude>
-    <ClInclude Include="LoaderScene.h">
-      <Filter>Framework\Scenes\Debug</Filter>
-    </ClInclude>
-    <ClInclude Include="Shapes.h">
+    <ClInclude Include="src\DataStructures.h">
       <Filter>Framework\Auxiliar Classes</Filter>
     </ClInclude>
-    <ClInclude Include="Container.h">
-      <Filter>Framework\Gui</Filter>
-    </ClInclude>
-    <ClInclude Include="Button.h">
-      <Filter>Framework\Gui</Filter>
-    </ClInclude>
-    <ClInclude Include="CheckButton.h">
-      <Filter>Framework\Gui</Filter>
-    </ClInclude>
-    <ClInclude Include="DropDownList.h">
-      <Filter>Framework\Gui</Filter>
-    </ClInclude>
-    <ClInclude Include="InputField.h">
-      <Filter>Framework\Gui</Filter>
-    </ClInclude>
-    <ClInclude Include="ProgressBar.h">
-      <Filter>Framework\Gui</Filter>
-    </ClInclude>
-    <ClInclude Include="Slider.h">
-      <Filter>Framework\Gui</Filter>
-    </ClInclude>
-    <ClInclude Include="SceneData.h">
-      <Filter>Framework\Scenes\Src</Filter>
-    </ClInclude>
-    <ClInclude Include="MessageBox.h">
-      <Filter>Framework\Gui</Filter>
-    </ClInclude>
-    <ClInclude Include="ConfirmationBox.h">
-      <Filter>Framework\Gui</Filter>
-    </ClInclude>
-    <ClInclude Include="StylesHandler.h">
-      <Filter>Framework\Handlers</Filter>
-    </ClInclude>
-    <ClInclude Include="DebugScene.h">
+    <ClInclude Include="src\DebugScene.h">
       <Filter>Game\Scenes</Filter>
     </ClInclude>
-    <ClInclude Include="Constants.h">
-      <Filter>Framework\Auxiliar Classes</Filter>
-    </ClInclude>
-    <ClInclude Include="DataStructures.h">
-      <Filter>Framework\Auxiliar Classes</Filter>
-    </ClInclude>
-    <ClInclude Include="Definitions.h">
+    <ClInclude Include="src\Definitions.h">
       <Filter>Game</Filter>
     </ClInclude>
-    <ClInclude Include="Match.h">
-      <Filter>Game\Matches</Filter>
+    <ClInclude Include="src\DropDownList.h">
+      <Filter>Framework\Gui</Filter>
     </ClInclude>
-    <ClInclude Include="Person.h">
-      <Filter>Game\Actors</Filter>
+    <ClInclude Include="src\Game.h">
+      <Filter>Framework\Source Files\Src</Filter>
     </ClInclude>
-    <ClInclude Include="Team.h">
-      <Filter>Game\Groups</Filter>
+    <ClInclude Include="src\GameEntity.h">
+      <Filter>Framework\Entities\Src</Filter>
     </ClInclude>
-    <ClInclude Include="Player.h">
-      <Filter>Game\Actors</Filter>
+    <ClInclude Include="src\GameObject.h">
+      <Filter>Framework\Entities\Objects</Filter>
     </ClInclude>
-    <ClInclude Include="Simulation.h">
-      <Filter>Game\Simulations</Filter>
+    <ClInclude Include="src\Graphics.h">
+      <Filter>Framework\Graphics\Src</Filter>
     </ClInclude>
-    <ClInclude Include="LadderSimulation.h">
-      <Filter>Game\Simulations</Filter>
+    <ClInclude Include="src\GraphicSettings.h">
+      <Filter>Framework\Graphics\Settings</Filter>
     </ClInclude>
-    <ClInclude Include="LadderMatch.h">
-      <Filter>Game\Matches</Filter>
-    </ClInclude>
-    <ClInclude Include="LadderTeam.h">
-      <Filter>Game\Groups</Filter>
-    </ClInclude>
-    <ClInclude Include="ProTeam.h">
-      <Filter>Game\Groups</Filter>
-    </ClInclude>
-    <ClInclude Include="PlayerData.h">
-      <Filter>Game\Actors</Filter>
-    </ClInclude>
-    <ClInclude Include="PlayerAttributes.h">
-      <Filter>Game\Actors</Filter>
-    </ClInclude>
-    <ClInclude Include="HeroData.h">
+    <ClInclude Include="src\Hero.h">
       <Filter>Game\Heroes</Filter>
     </ClInclude>
-    <ClInclude Include="Hero.h">
+    <ClInclude Include="src\HeroData.h">
       <Filter>Game\Heroes</Filter>
     </ClInclude>
-    <ClInclude Include="DataHandler.h">
+    <ClInclude Include="src\InputField.h">
+      <Filter>Framework\Gui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\InputHandler.h">
       <Filter>Framework\Handlers</Filter>
+    </ClInclude>
+    <ClInclude Include="src\LadderMatch.h">
+      <Filter>Game\Matches</Filter>
+    </ClInclude>
+    <ClInclude Include="src\LadderSimulation.h">
+      <Filter>Game\Simulations</Filter>
+    </ClInclude>
+    <ClInclude Include="src\LadderTeam.h">
+      <Filter>Game\Groups</Filter>
+    </ClInclude>
+    <ClInclude Include="src\LoaderScene.h">
+      <Filter>Framework\Scenes\Debug</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Match.h">
+      <Filter>Game\Matches</Filter>
+    </ClInclude>
+    <ClInclude Include="src\MathHelper.h">
+      <Filter>Framework\Auxiliar Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="src\MessageBox.h">
+      <Filter>Framework\Gui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Person.h">
+      <Filter>Game\Actors</Filter>
+    </ClInclude>
+    <ClInclude Include="src\PhysicsHandler.h">
+      <Filter>Framework\Physics\Src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\PhysicsHelper.h">
+      <Filter>Framework\Physics\Src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Player.h">
+      <Filter>Game\Actors</Filter>
+    </ClInclude>
+    <ClInclude Include="src\PlayerAttributes.h">
+      <Filter>Game\Actors</Filter>
+    </ClInclude>
+    <ClInclude Include="src\PlayerData.h">
+      <Filter>Game\Actors</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ProgressBar.h">
+      <Filter>Framework\Gui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ProTeam.h">
+      <Filter>Game\Groups</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Scene.h">
+      <Filter>Framework\Scenes\Src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\SceneData.h">
+      <Filter>Framework\Scenes\Src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\SceneHandler.h">
+      <Filter>Framework\Handlers</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Shapes.h">
+      <Filter>Framework\Auxiliar Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Simulation.h">
+      <Filter>Game\Simulations</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Slider.h">
+      <Filter>Framework\Gui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\stdafx.h">
+      <Filter>Framework\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\StylesHandler.h">
+      <Filter>Framework\Handlers</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Team.h">
+      <Filter>Game\Groups</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Texture.h">
+      <Filter>Framework\Entities\Textures</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Timer.h">
+      <Filter>Framework\Auxiliar Classes</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
