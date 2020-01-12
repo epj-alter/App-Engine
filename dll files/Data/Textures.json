@@ -1,0 +1,9 @@
+{
+    "debug_textures" :[
+        {"key":"black_box", "path":"Debug/black_box.png"},
+        {"key":"red_box", "path":"Debug/red_box.png"},
+        {"key":"red_circle", "path":"Debug/red_circle.png"},
+        {"key":"blue_circle", "path":"Debug/blue_circle.png"},
+        {"key":"worlds", "path":"Debug/Worlds2018.png"}
+    ]
+}

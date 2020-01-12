@@ -1,0 +1,10 @@
+{
+    "assets": 7,
+
+    "music":[
+        {"key":"50cent", "path":"Debug/galagamus.wav"}
+    ],
+    "sfx":[
+        {"key":"50cent", "path":"Debug/galaga1.wav"}
+    ]
+}
