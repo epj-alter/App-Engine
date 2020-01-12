@@ -6,13 +6,17 @@ class LadderTeam : public Team
 {
 private:
 
+	std::map<unsigned, Hero*>* mAvailableHeroes;
+
 	const size_t max_players = 5;
 	std::map<Position, Player*> mPlayers;
+	std::map<Position, Hero* > mBannedHeroes;
+	std::map<Position, Hero* > mSelectedHeroes;
 
 public:
 
 	/* Constructor */
-	LadderTeam();
+	LadderTeam(std::map<unsigned, Hero*>* available_heroes);
 	~LadderTeam();
 
 	/* Accessors */
@@ -21,6 +25,10 @@ public:
 
 	/* Modifiers */
 	const bool addPlayer(Player* player, Position position);
+
+	/* Pick and Ban Phase */
+	void banHero(Position position);
+	void selectHero(Position position);
 
 	/* update */
 	void update();

@@ -54,7 +54,7 @@ namespace Engine
 		intRect getBounds() const;
 
 		/* Modifiers */
-		void translate(Vector2 vec, SPACE space = general) override;
+		void translate(Vector2 vec, SPACE space = SPACE::general) override;
 		void setBounds(int x, int y, int width, int height);
 
 		void colors(SDL_Color fill_color, SDL_Color line_color);

@@ -6,8 +6,8 @@ class Player : public Person
 {
 private:
 
+
 	/* Professional Info */
-	RoleProgression mRoles;
 	Position mPosition;
 	unsigned mRank;
 	unsigned mValue;
@@ -18,17 +18,16 @@ private:
 	bool mQueuedUP;
 	Position mQueuedPosition;
 
-	/* Attributes */
-	PlayerAttributes* mPlayerAtt;
-
 	/* Statistics */
+	PlayerAttributes* mPlayerAtt;
 	PlayerStatistics* mPlayerStats;
-
-	//Averages 
 	PlayerAverages* mPlayerAvgs;
 
-	/* In Game Stuff */
-	Hero* mSelectedHero;
+	/* Hero related */
+	std::map<unsigned, unsigned, std::greater<unsigned>> mHeroProgression;	//(hero_id, experience_with_hero)
+	std::map<unsigned, unsigned, std::greater<unsigned>> mFavouriteHeroes;	//(hero_id, times played with hero)
+	std::map<unsigned, unsigned, std::greater<unsigned>> mHatedHeroes;		//(hero_id, times played against hero)
+	std::map<unsigned, unsigned, std::greater<unsigned>> mHeroesToPractice;	//(hero_id, priority of training)
 
 public:
 
@@ -41,13 +40,19 @@ public:
 	const Position getPosition() const;
 	const bool isQueuedUp() const;
 	const Position queuedPosition() const;
-	const Hero* getHero() const;
+	const std::vector<unsigned> getBestHeroesID() const;
+	const std::vector<unsigned> getFavouriteHeroesID() const;
+	const std::vector<unsigned> getHatedHeroesID() const;
+	const std::vector<unsigned> getHeroesToPractice() const;
 
 	/* Modifiers */
 	void setPosition(Position position);
 	void setQueueStatus(bool queue_status);
 	void setQueuePosition(Position queue_position);
-	void setHero(Hero* selected_hero);
+
+	/* Pick & Ban Phase */
+	void insertHeroPractice(unsigned hero_id, unsigned priority);
+	void removeHeroPractice(unsigned hero_id);
 
 	/* Update */
 	void update();

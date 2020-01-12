@@ -6,7 +6,7 @@ namespace Engine
 	Button::Button(GameEntity* parent, std::string text, int x, int y, int width, int height, bool text_only, bool default_button)
 		: Container(parent, x, y, width, height)
 	{
-		mState = idle;
+		mState = BUTTON_STATE::idle;
 
 		mText = text;
 		mLabel = nullptr;
@@ -39,7 +39,7 @@ namespace Engine
 	Button::Button(GameEntity* parent, int x, int y, int width, int height, bool disabled, bool selected)
 		: Container(parent, x, y, width, height)
 	{
-		mState = idle;
+		mState = BUTTON_STATE::idle;
 
 		mLabel = nullptr;
 
@@ -72,21 +72,21 @@ namespace Engine
 		{
 			if (mTextButton)
 			{
-				if (mBounds.contains(mInput->getMousePosition()) && !mInput->mouseButtonPressed(InputHandler::left))
-					mState = hovered;
-				else if (mLabel->getBounds().contains(mInput->getMousePosition()) && mInput->mouseButtonPressed(InputHandler::left))
-					mState = pressed;
+				if (mBounds.contains(mInput->getMousePosition()) && !mInput->mouseButtonPressed(InputHandler::MOUSE_BUTTONS::left))
+					mState = BUTTON_STATE::hovered;
+				else if (mLabel->getBounds().contains(mInput->getMousePosition()) && mInput->mouseButtonPressed(InputHandler::MOUSE_BUTTONS::left))
+					mState = BUTTON_STATE::pressed;
 				else
-					mState = idle;
+					mState = BUTTON_STATE::idle;
 			}
 			else
 			{
-				if (mBounds.contains(mInput->getMousePosition()) && !mInput->mouseButtonPressed(InputHandler::left))
-					mState = hovered;
-				else if (mBounds.contains(mInput->getMousePosition()) && mInput->mouseButtonPressed(InputHandler::left))
-					mState = pressed;
+				if (mBounds.contains(mInput->getMousePosition()) && !mInput->mouseButtonPressed(InputHandler::MOUSE_BUTTONS::left))
+					mState = BUTTON_STATE::hovered;
+				else if (mBounds.contains(mInput->getMousePosition()) && mInput->mouseButtonPressed(InputHandler::MOUSE_BUTTONS::left))
+					mState = BUTTON_STATE::pressed;
 				else
-					mState = idle;
+					mState = BUTTON_STATE::idle;
 			}
 		}
 
@@ -133,18 +133,18 @@ namespace Engine
 		{
 			switch (mState)
 			{
-			case Engine::Button::idle:
+			case Engine::Button::BUTTON_STATE::idle:
 				if (!mSelected)
 					mFillColor = mIdleColor;
 				else
 					mFillColor = mSelectedColor;
 				break;
 
-			case Engine::Button::hovered:
+			case Engine::Button::BUTTON_STATE::hovered:
 				mFillColor = mHoveredColor;
 				break;
 
-			case Engine::Button::pressed:
+			case Engine::Button::BUTTON_STATE::pressed:
 				mFillColor = mPressedColor;
 				break;
 			}

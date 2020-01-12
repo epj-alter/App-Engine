@@ -7,7 +7,7 @@ namespace Engine
 	class Graphics
 	{
 	public:
-		enum FONTMODE {solid_f, shaded_f, blended_f};
+		enum class FONTMODE {solid_f, shaded_f, blended_f};
 	private:
 
 		/* Static Instances */
@@ -41,7 +41,7 @@ namespace Engine
 
 		/* Functions */
 		SDL_Texture* loadTexture(std::string path);
-		SDL_Texture* createTextTexture(TTF_Font* font, std::string text, SDL_Color fg_color, FONTMODE mode = solid_f, SDL_Color bg_color = {0, 0, 0});
+		SDL_Texture* createTextTexture(TTF_Font* font, std::string text, SDL_Color fg_color, FONTMODE mode = FONTMODE::solid_f, SDL_Color bg_color = {0, 0, 0});
 		void clearBackBuffer();
 		void drawRectangle(SDL_Rect* rectangle, SDL_Color fill_color, SDL_Color outline_color);
 		void drawTexture

@@ -9,7 +9,7 @@ namespace Engine
 
 		if (this->mAnimationTimer >= this->mAnimationSpeed)
 		{
-			if (this->mWrapMode == loop)
+			if (this->mWrapMode == WRAP_MODE::loop)
 			{
 				this->mAnimationTimer -= this->mAnimationSpeed;
 			}
@@ -19,7 +19,7 @@ namespace Engine
 				this->mAnimationIsDone = true;
 			}
 		}
-		if (this->mAnimationDirection == horizontal)
+		if (this->mAnimationDirection == ANIM_DIR::horizontal)
 		{
 			this->mClippedRect.x = this->mStartX + static_cast<int>(this->mAnimationTimer / this->mTimerPerFrame) * this->mWidth;
 		}
@@ -46,7 +46,7 @@ namespace Engine
 		this->mAnimationDirection = animation_direction;
 
 		this->mAnimationIsDone = false;
-		this->mWrapMode = loop;
+		this->mWrapMode = WRAP_MODE::loop;
 	}
 
 	AnimatedTexture::~AnimatedTexture()

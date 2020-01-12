@@ -47,7 +47,7 @@ namespace Engine
 	{
 		if (!mOpen)
 		{
-			if (mBounds.contains(mInput->getMousePosition()) && mInput->mouseButtonPressed(InputHandler::left))
+			if (mBounds.contains(mInput->getMousePosition()) && mInput->mouseButtonPressed(InputHandler::MOUSE_BUTTONS::left))
 			{
 				mOpen = true; 
 				mHeight = mOpenHeight;
@@ -59,13 +59,13 @@ namespace Engine
 			{
 				itr->update();
 
-				if (itr->getState() == Button::pressed)
+				if (itr->getState() == Button::BUTTON_STATE::pressed)
 				{
 					mOpen = false;
 					mHeight = itr->getBounds().height; //static_cast<int>(mOpenHeight / mItems.size());
 					mIndex->setLabel(itr->getText());
 				}
-				else if (mInput->mouseButtonPressed(InputHandler::left) && (!mBounds.contains(mInput->getMousePosition()) || mIndex->getState() == Button::pressed))
+				else if (mInput->mouseButtonPressed(InputHandler::MOUSE_BUTTONS::left) && (!mBounds.contains(mInput->getMousePosition()) || mIndex->getState() == Button::BUTTON_STATE::pressed))
 				{
 					mOpen = false;
 					mHeight = itr->getBounds().height; //static_cast<int>(mOpenHeight / mItems.size());

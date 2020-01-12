@@ -231,13 +231,13 @@ namespace Engine
 
 		switch (mode)
 		{
-		case Engine::Graphics::solid_f:
+		case Engine::Graphics::FONTMODE::solid_f:
 			surface = TTF_RenderText_Solid(font, text.c_str(), fg_olor);
 			break;
-		case Engine::Graphics::shaded_f:
+		case Engine::Graphics::FONTMODE::shaded_f:
 			surface = TTF_RenderText_Shaded(font, text.c_str(), fg_olor, bg_color);
 			break;
-		case Engine::Graphics::blended_f:
+		case Engine::Graphics::FONTMODE::blended_f:
 			surface = TTF_RenderText_Blended(font, text.c_str(), fg_olor);
 			break;
 		default:

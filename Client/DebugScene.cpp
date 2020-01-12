@@ -3,38 +3,50 @@
 
 namespace Engine
 {
-	DebugScene::DebugScene()
-		: Scene("debug_scene", Scene::debug_scene)
+	/* Private Functions */
+	void DebugScene::init()
 	{
 		mDataHandler = DataHandler::instance();
-		mPlayerBase = new PlayerBase(500);
+		mDataHandler->setDatabaseSize(500);
 
 		//printf("ELO 1: %i \n", mTeam->getPerson(Engine::Selection::TOP)->getPlayerAttribute().ELO);
 		//printf("ELO 2: %i \n", mTeam->getPerson(Engine::Selection::MIDDLE)->getPlayerAttribute().ELO);
 		//printf("TEAM ELO: %i \n", mTeam->getELO());
 
-		mLadderSimulation = new LadderSimulation(mPlayerBase);
+		mLadderSimulation = new LadderSimulation();
+	}
+
+	/* Constructor / Destructor */
+	DebugScene::DebugScene()
+		: Scene("debug_scene", SCENE_ID::debug_scene)
+	{
+		mButton1 = new Button(this, "Simulate", 100, 100, 100, 20);
+
+		std::thread t1(&DebugScene::init, this);
+		t1.detach();
+		//t1.join(); waits for it to finish..
 	}
 
 	DebugScene::~DebugScene()
 	{
+		delete mButton1;
+		mButton1 = nullptr;
+
 		mDataHandler = nullptr;
 
 		delete mLadderSimulation;
 		mLadderSimulation = nullptr;
-
-		delete mPlayerBase;
-		mPlayerBase = nullptr;
 	}
 
 	/* Interface Functions */
 	void DebugScene::updateInterface()
 	{
+		mButton1->update();
 	}
 
 	void DebugScene::renderInterface()
 	{
-		
+		mButton1->render();
 	}
 
 	/* Core Functions */

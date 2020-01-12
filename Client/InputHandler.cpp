@@ -80,23 +80,23 @@ namespace Engine
 
 		switch (button)
 		{
-		case left:
+		case MOUSE_BUTTONS::left:
 			mask = SDL_BUTTON_LMASK;
 			break;
 
-		case right:
+		case MOUSE_BUTTONS::right:
 			mask = SDL_BUTTON_RMASK;
 			break;
 
-		case middle:
+		case MOUSE_BUTTONS::middle:
 			mask = SDL_BUTTON_MMASK;
 			break;
 
-		case back:
+		case MOUSE_BUTTONS::back:
 			mask = SDL_BUTTON_X1MASK;
 			break;
 
-		case forward:
+		case MOUSE_BUTTONS::forward:
 			mask = SDL_BUTTON_X2MASK;
 			break;
 		};
@@ -110,23 +110,23 @@ namespace Engine
 
 		switch (button)
 		{
-		case left:
+		case MOUSE_BUTTONS::left:
 			mask = SDL_BUTTON_LMASK;
 			break;
 
-		case right:
+		case MOUSE_BUTTONS::right:
 			mask = SDL_BUTTON_RMASK;
 			break;
 
-		case middle:
+		case MOUSE_BUTTONS::middle:
 			mask = SDL_BUTTON_MMASK;
 			break;
 
-		case back:
+		case MOUSE_BUTTONS::back:
 			mask = SDL_BUTTON_X1MASK;
 			break;
 
-		case forward:
+		case MOUSE_BUTTONS::forward:
 			mask = SDL_BUTTON_X2MASK;
 			break;
 		};
@@ -140,23 +140,23 @@ namespace Engine
 
 		switch (button)
 		{
-		case left:
+		case MOUSE_BUTTONS::left:
 			mask = SDL_BUTTON_LMASK;
 			break;
 
-		case right:
+		case MOUSE_BUTTONS::right:
 			mask = SDL_BUTTON_RMASK;
 			break;
 
-		case middle:
+		case MOUSE_BUTTONS::middle:
 			mask = SDL_BUTTON_MMASK;
 			break;
 
-		case back:
+		case MOUSE_BUTTONS::back:
 			mask = SDL_BUTTON_X1MASK;
 			break;
 
-		case forward:
+		case MOUSE_BUTTONS::forward:
 			mask = SDL_BUTTON_X2MASK;
 			break;
 		};

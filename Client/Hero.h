@@ -7,13 +7,14 @@ class Hero
 protected:
 
 	/* Creation */
-	std::string mID;
+	unsigned mID;
 	std::string mName;
 	HeroClass mClass;
 
 	/* Basic Info */
 	unsigned mPriority;
 	bool mBanned;
+	bool mSelected;
 	bool mIsInGame;
 
 	/* Attributes */
@@ -44,7 +45,7 @@ public:
 
 	/* Constructor */
 	Hero();
-	Hero(std::string name, std::string id, unsigned priority, unsigned hero_class, 
+	Hero(std::string name, unsigned id, unsigned priority, unsigned hero_class, 
 		unsigned strong1, unsigned strong2, unsigned strong3, unsigned weak1, unsigned weak2, unsigned weak3,
 		unsigned bstrength, unsigned bconstitution, unsigned bintellect, unsigned bmentality, unsigned bdexterity, unsigned blethality,
 		unsigned sstrength, unsigned sconstitution, unsigned sintellect, unsigned smentality, unsigned sdexterity, unsigned slethality,
@@ -54,11 +55,14 @@ public:
 	~Hero(); // make virtual for abstract class
 
 	/* Accessors */
-	const bool banned() const;
+	const unsigned getID() const;
+	const bool isBanned() const;
+	const bool isSelected() const;
 
 	/* Modifiers */
 	void setInGame(bool in_game);
-	void setBanned(bool banned);
+	void ban();
+	void select();
 
 	/* Core Functions */
 	void update();

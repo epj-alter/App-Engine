@@ -6,6 +6,7 @@
 #include <deque>
 #include <iostream>
 #include <iomanip>
+#include <functional>
 #include <map>
 #include <iterator>
 #include <memory>
@@ -45,6 +46,7 @@
 #include "AudioHandler.h"
 #include "Shapes.h"
 #include "StylesHandler.h"
+#include "DataHandler.h"
 
 /* Exclusive */
 #include "PhysicsHandler.h"

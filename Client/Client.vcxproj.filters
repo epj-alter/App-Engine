@@ -70,9 +70,6 @@
     <Filter Include="Game\Scenes">
       <UniqueIdentifier>{2623699f-3071-4543-b241-9326a296f988}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Game\Person Handler">
-      <UniqueIdentifier>{006925c7-6558-4956-9c23-e548c0c1a8ec}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Game\Simulations">
       <UniqueIdentifier>{91c54a2e-02bf-41e6-bf5c-4ec363d39cdd}</UniqueIdentifier>
     </Filter>
@@ -206,9 +203,6 @@
     </ClCompile>
     <ClCompile Include="Person.cpp">
       <Filter>Game\Actors</Filter>
-    </ClCompile>
-    <ClCompile Include="PersonHandler.cpp">
-      <Filter>Game\Person Handler</Filter>
     </ClCompile>
     <ClCompile Include="Team.cpp">
       <Filter>Game\Groups</Filter>
@@ -361,9 +355,6 @@
     </ClInclude>
     <ClInclude Include="Person.h">
       <Filter>Game\Actors</Filter>
-    </ClInclude>
-    <ClInclude Include="PersonHandler.h">
-      <Filter>Game\Person Handler</Filter>
     </ClInclude>
     <ClInclude Include="Team.h">
       <Filter>Game\Groups</Filter>

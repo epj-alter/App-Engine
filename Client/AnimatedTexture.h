@@ -10,8 +10,8 @@ namespace Engine
 	{
 	public:
 
-		enum WRAP_MODE { once = 0, loop };
-		enum ANIM_DIR { horizontal = 0, vertical };
+		enum class WRAP_MODE { once, loop };
+		enum class ANIM_DIR { horizontal, vertical };
 
 	protected:
 

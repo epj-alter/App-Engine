@@ -30,7 +30,7 @@ namespace Engine
 
 	Vector2 GameEntity::getCenter(SPACE space) const
 	{
-		if (space ==  own || mParent == nullptr)
+		if (space == SPACE::own || mParent == nullptr)
 			return mCenterPos;
 
 		GameEntity* parent = mParent;
@@ -39,9 +39,9 @@ namespace Engine
 
 		do
 		{
-			parent_scale = mParent->getScale(own);
-			final_pos = RotateVector(Vector2(final_pos.x * parent_scale.x, final_pos.y * parent_scale.y), parent->getRotation(own));
-			final_pos += parent->getCenter(own);
+			parent_scale = mParent->getScale(SPACE::own);
+			final_pos = RotateVector(Vector2(final_pos.x * parent_scale.x, final_pos.y * parent_scale.y), parent->getRotation(SPACE::own));
+			final_pos += parent->getCenter(SPACE::own);
 
 			parent = parent->getParent();
 
@@ -52,10 +52,10 @@ namespace Engine
 
 	Vector2 GameEntity::getScale(SPACE space) const
 	{
-		if (space == own || mParent == nullptr)
+		if (space == SPACE::own || mParent == nullptr)
 			return mScale;
 
-		Vector2 scale = mParent->getScale(general);
+		Vector2 scale = mParent->getScale(SPACE::general);
 		scale.x *= mScale.x;
 		scale.y *= mScale.y;
 
@@ -64,10 +64,10 @@ namespace Engine
 
 	float GameEntity::getRotation(SPACE space) const
 	{
-		if (space == own || mParent == nullptr)
+		if (space == SPACE::own || mParent == nullptr)
 			return mRotation;
 
-		return mParent->getRotation(general) + mRotation;
+		return mParent->getRotation(SPACE::general) + mRotation;
 	}
 
 	bool GameEntity::getActive(SPACE space) const
@@ -80,22 +80,22 @@ namespace Engine
 	{
 		if (parent == nullptr)
 		{
-			this->mCenterPos = this->getCenter(general);
-			this->mRotation = this->getRotation(general);
-			this->mScale = this->getScale(general);
+			this->mCenterPos = this->getCenter(SPACE::general);
+			this->mRotation = this->getRotation(SPACE::general);
+			this->mScale = this->getScale(SPACE::general);
 		}
 		else
 		{
 			if (mParent != nullptr)
 				setParent(nullptr);
 
-			Vector2 parent_scale = parent->getScale(general);
+			Vector2 parent_scale = parent->getScale(SPACE::general);
 
-			mCenterPos = RotateVector(getCenter(general) - parent->getCenter(general), -parent->getRotation(general));
+			mCenterPos = RotateVector(getCenter(SPACE::general) - parent->getCenter(SPACE::general), -parent->getRotation(SPACE::general));
 			mCenterPos.x /= parent_scale.x;
 			mCenterPos.y /= parent_scale.y;
 
-			mRotation -= parent->getRotation(general);
+			mRotation -= parent->getRotation(SPACE::general);
 			mScale = Vector2(mScale.x / parent_scale.x, mScale.y / parent_scale.y);
 
 		}
@@ -142,7 +142,7 @@ namespace Engine
 
 	void GameEntity::translate(Vector2 vec, SPACE space)
 	{
-		if (space == general)
+		if (space == SPACE::general)
 		{
 			mCenterPos += vec;
 		}

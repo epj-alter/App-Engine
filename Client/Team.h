@@ -1,6 +1,6 @@
 #ifndef TEAM_H
 #define TEAM_H
-#include "PersonHandler.h"
+#include "Player.h"
 
 class Team
 {
@@ -10,7 +10,6 @@ protected:
 	unsigned mID;
 	TeamType mType; //TODO
 	std::string mName;
-
 
 	/* Attributes */
 	unsigned mAvgELO;

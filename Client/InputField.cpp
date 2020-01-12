@@ -104,13 +104,13 @@ namespace Engine
 
 	void InputField::update()
 	{
-		if (this->getBounds().contains(mInput->getMousePosition()) && !mFocus && mInput->mouseButtonPressed(InputHandler::left))
+		if (this->getBounds().contains(mInput->getMousePosition()) && !mFocus && mInput->mouseButtonPressed(InputHandler::MOUSE_BUTTONS::left))
 		{
 			mLineColor = mActiveColor;
 			SDL_StartTextInput();
 			mFocus = true;
 		}
-		else if (mFocus && mInput->mouseButtonPressed(InputHandler::left) && !this->getBounds().contains(mInput->getMousePosition()))
+		else if (mFocus && mInput->mouseButtonPressed(InputHandler::MOUSE_BUTTONS::left) && !this->getBounds().contains(mInput->getMousePosition()))
 		{
 			mLineColor = mInactiveColor;
 			SDL_StopTextInput();

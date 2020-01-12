@@ -55,7 +55,7 @@ namespace Engine
 			{
 				itr.second->update();
 
-				if (itr.second->getState() == Button::pressed)
+				if (itr.second->getState() == Button::BUTTON_STATE::pressed)
 				{
 					if(!itr.second->isDisabled())
 						itr.second->setSelected(!itr.second->isSelected());
@@ -68,7 +68,7 @@ namespace Engine
 			{
 				itr.second->update();
 
-				if (itr.second->getState() == Button::pressed)
+				if (itr.second->getState() == Button::BUTTON_STATE::pressed)
 				{
 					if (!itr.second->isDisabled())
 							itr.second->setSelected(!itr.second->isSelected());

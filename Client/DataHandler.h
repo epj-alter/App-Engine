@@ -4,7 +4,7 @@
 
 namespace Engine
 {
-	typedef std::map<std::string, Hero*> aHeroMap;
+	typedef std::map<unsigned, Hero*> aHeroMap;
 
 	class DataHandler
 	{
@@ -12,13 +12,17 @@ namespace Engine
 
 		static DataHandler* sInstance;
 
-		/* Heroes Data loading and parsing */
+		/* Heroes Data Base loading and parsing */
 		FILE* dFile;
 		aHeroMap mHeroes;
 
+		/* Players DataBase and variables */
+		std::vector<Player*> mPlayers;
+		unsigned mDataBaseSize;
 
 		/* Initializer Functions */
 		void initHeroesData();
+		void initPlayersDataBase();
 
 		/* Constructor / Destructor */
 		DataHandler();
@@ -26,11 +30,19 @@ namespace Engine
 
 	public:
 
+		/* Instance Functions */
 		static DataHandler* instance();
 		static void release();
 
-		const aHeroMap* getHeroesMap() const;
-		const Hero* getHero(std::string hero_id) const;
+		/* Accessors */
+		aHeroMap* getHeroesDB();
+		std::vector<Player*>* getPlayersDB();
+		const Hero* getHero(unsigned hero_id) const;
+
+		/* Modifier Functions */
+		void setDatabaseSize(unsigned db_size);
+		void shuffle();
+		void update();
 	};
 }
 

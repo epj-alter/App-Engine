@@ -6,7 +6,7 @@ namespace Engine
 	class StylesHandler
 	{
 	public:
-		enum FONT_MODIFIER {x_small, small, medium, large, x_large };
+		enum class FONT_MODIFIER {x_small, small, medium, large, x_large };
 
 	private:
 
@@ -28,7 +28,7 @@ namespace Engine
 		static void release();
 
 		/* Functions */
-		int size(StylesHandler::FONT_MODIFIER size_mod = StylesHandler::medium);
+		int size(StylesHandler::FONT_MODIFIER size_mod = StylesHandler::FONT_MODIFIER::medium);
 		std::string font(std::string key) const;
 		SDL_Color color(std::string key) const;
 
