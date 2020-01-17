@@ -168,9 +168,6 @@
     <ClCompile Include="src\LoaderScene.cpp">
       <Filter>Framework\Scenes\Debug</Filter>
     </ClCompile>
-    <ClCompile Include="src\main.cpp">
-      <Filter>Framework\Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="src\Match.cpp">
       <Filter>Game\Matches</Filter>
     </ClCompile>
