@@ -1,0 +1,192 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Framework">
+      <UniqueIdentifier>{384936d3-3587-4971-82a5-4d08f07da22c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Framework\Auxiliar Classes">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Framework\Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Framework\Entities">
+      <UniqueIdentifier>{1c47a2ac-5a92-47e1-974d-0f551fe5fa3c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\Entities\Textures">
+      <UniqueIdentifier>{6a9ee264-8295-488a-a59a-05c849f43612}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\Entities\Objects">
+      <UniqueIdentifier>{65840690-7b88-45fd-a283-c99af41e3a23}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\Physics">
+      <UniqueIdentifier>{87c92b22-8cbe-4c23-a71c-a3b62d72ed38}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\Handlers">
+      <UniqueIdentifier>{7ee0499c-f20e-4ff6-93a6-241fc77891e6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\Physics\Colliders">
+      <UniqueIdentifier>{2a9f8872-5964-472d-b5b7-bf65da268fbd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\Gui">
+      <UniqueIdentifier>{fafbdb1d-944e-4523-bd3f-885224a47eb0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\Physics\Src">
+      <UniqueIdentifier>{8f1e26d3-092e-426a-b6a9-fd1a63f0224d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\Source Files\Src">
+      <UniqueIdentifier>{6cb55b89-5bb1-4a71-bea3-57d8703581d7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\Scenes">
+      <UniqueIdentifier>{3c0db764-4988-43a9-ae75-94528af035c8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\Scenes\Src">
+      <UniqueIdentifier>{2f183d52-8d8c-4a48-8493-e623e5428fdd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\Entities\Src">
+      <UniqueIdentifier>{41144c8a-11f3-4d9f-b92b-00503215f99d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\Graphics">
+      <UniqueIdentifier>{5072a079-0caf-4c5f-b89d-af742d6530b1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\Graphics\Src">
+      <UniqueIdentifier>{0fbbcd99-e7e8-4a9a-80cc-d62f6521aff0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\Graphics\Settings">
+      <UniqueIdentifier>{eace3d6c-adfe-4b6f-a3a7-6ad50e9961bd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\Scenes\Debug">
+      <UniqueIdentifier>{3b5019a1-de4d-44cd-90fb-dc94e4b82e09}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game">
+      <UniqueIdentifier>{79dff343-5d42-49a9-a5c8-a3f70a4b7a74}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Scenes">
+      <UniqueIdentifier>{2623699f-3071-4543-b241-9326a296f988}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Simulations">
+      <UniqueIdentifier>{91c54a2e-02bf-41e6-bf5c-4ec363d39cdd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Actors">
+      <UniqueIdentifier>{a221a134-82d2-4e20-96e9-06f996056391}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Groups">
+      <UniqueIdentifier>{52db379c-5af0-48ce-b0e3-0aaa563819a2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Matches">
+      <UniqueIdentifier>{99441011-a455-4d1b-8488-bcc452bd4c56}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Heroes">
+      <UniqueIdentifier>{84226123-3699-4e94-b017-98fba5c82553}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\AnimatedTexture.cpp">
+      <Filter>Framework\Entities\Textures</Filter>
+    </ClCompile>
+    <ClCompile Include="src\AssetsHandler.cpp">
+      <Filter>Framework\Handlers</Filter>
+    </ClCompile>
+    <ClCompile Include="src\AudioHandler.cpp">
+      <Filter>Framework\Handlers</Filter>
+    </ClCompile>
+    <ClCompile Include="src\BezierPath.cpp">
+      <Filter>Framework\Auxiliar Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="src\BoxCollider.cpp">
+      <Filter>Framework\Physics\Colliders</Filter>
+    </ClCompile>
+    <ClCompile Include="src\CircleCollider.cpp">
+      <Filter>Framework\Physics\Colliders</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Collider.cpp">
+      <Filter>Framework\Physics\Colliders</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GameEntity.cpp">
+      <Filter>Framework\Entities\Src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GameObject.cpp">
+      <Filter>Framework\Entities\Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Graphics.cpp">
+      <Filter>Framework\Graphics\Src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GraphicSettings.cpp">
+      <Filter>Framework\Graphics\Settings</Filter>
+    </ClCompile>
+    <ClCompile Include="src\InputHandler.cpp">
+      <Filter>Framework\Handlers</Filter>
+    </ClCompile>
+    <ClCompile Include="src\PhysicsHandler.cpp">
+      <Filter>Framework\Physics\Src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Texture.cpp">
+      <Filter>Framework\Entities\Textures</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Timer.cpp">
+      <Filter>Framework\Auxiliar Classes</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\AnimatedTexture.h">
+      <Filter>Framework\Entities\Textures</Filter>
+    </ClInclude>
+    <ClInclude Include="src\AssetsHandler.h">
+      <Filter>Framework\Handlers</Filter>
+    </ClInclude>
+    <ClInclude Include="src\AudioHandler.h">
+      <Filter>Framework\Handlers</Filter>
+    </ClInclude>
+    <ClInclude Include="src\BezierPath.h">
+      <Filter>Framework\Auxiliar Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="src\BoxCollider.h">
+      <Filter>Framework\Physics\Colliders</Filter>
+    </ClInclude>
+    <ClInclude Include="src\CircleCollider.h">
+      <Filter>Framework\Physics\Colliders</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Collider.h">
+      <Filter>Framework\Physics\Colliders</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GameEntity.h">
+      <Filter>Framework\Entities\Src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GameObject.h">
+      <Filter>Framework\Entities\Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Graphics.h">
+      <Filter>Framework\Graphics\Src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GraphicSettings.h">
+      <Filter>Framework\Graphics\Settings</Filter>
+    </ClInclude>
+    <ClInclude Include="src\InputHandler.h">
+      <Filter>Framework\Handlers</Filter>
+    </ClInclude>
+    <ClInclude Include="src\MathHelper.h">
+      <Filter>Framework\Auxiliar Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="src\PhysicsHandler.h">
+      <Filter>Framework\Physics\Src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\PhysicsHelper.h">
+      <Filter>Framework\Physics\Src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Shapes.h">
+      <Filter>Framework\Auxiliar Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Texture.h">
+      <Filter>Framework\Entities\Textures</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Timer.h">
+      <Filter>Framework\Auxiliar Classes</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="src\Person.cpp" />
+    <ClCompile Include="src\Player.cpp" />
+    <ClCompile Include="src\PlayerAttributes.cpp" />
+    <ClCompile Include="src\ProTeam.cpp" />
+    <ClCompile Include="src\Simulation.cpp" />
+    <ClCompile Include="src\Team.cpp" />
+    <ClCompile Include="src\LadderMatch.cpp" />
+    <ClCompile Include="src\LadderSimulation.cpp" />
+    <ClCompile Include="src\LadderTeam.cpp" />
+    <ClCompile Include="src\Hero.cpp" />
+    <ClCompile Include="src\Match.cpp" />
+    <ClCompile Include="src\DataHandler.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\Person.h" />
+    <ClInclude Include="src\Player.h" />
+    <ClInclude Include="src\PlayerAttributes.h" />
+    <ClInclude Include="src\PlayerData.h" />
+    <ClInclude Include="src\ProTeam.h" />
+    <ClInclude Include="src\Simulation.h" />
+    <ClInclude Include="src\Team.h" />
+    <ClInclude Include="src\LadderSimulation.h" />
+    <ClInclude Include="src\LadderMatch.h" />
+    <ClInclude Include="src\LadderTeam.h" />
+    <ClInclude Include="src\HeroData.h" />
+    <ClInclude Include="src\Hero.h" />
+    <ClInclude Include="src\Match.h" />
+    <ClInclude Include="src\Definitions.h" />
+    <ClInclude Include="src\DataHandler.h" />
+    <ClInclude Include="src\DataStructures.h" />
+  </ItemGroup>
+</Project>
