@@ -1,5 +1,6 @@
-# BAM
-Battle Arena Manager Game
+# ENGINE
+
+Working on it.
 
 ## Libraries in use
 * SDL2 2.0.10

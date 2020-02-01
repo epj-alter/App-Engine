@@ -14,9 +14,9 @@ namespace Client
 	{
 		mButton1 = new GUI::Button(this, "Simulate", 100, 100, 100, 20);
 
-		std::thread t1(&DebugScene::init, this);
+		/*std::thread t1(&DebugScene::init, this);
 		t1.detach();
-		//t1.join(); waits for it to finish..
+		t1.join(); waits for it to finish.. */
 	}
 
 	DebugScene::~DebugScene()
@@ -29,6 +29,10 @@ namespace Client
 	void DebugScene::updateInterface()
 	{
 		mButton1->update();
+
+		if (mButton1->getState() == GUI::Button::BUTTON_STATE::pressed) {
+			printf("Button says hello!\n");
+		}
 	}
 
 	void DebugScene::renderInterface()
