@@ -1,6 +1,6 @@
 #ifndef GAME_H
 #define GAME_H
-#include "SceneHandler.h"
+#include "../scenes/src/SceneHandler.h"
 
 namespace Client
 {
@@ -21,7 +21,6 @@ namespace Client
 		PhysicsHandler* mPhysicsHandler;
 		SceneHandler* mSceneHandler;
 		GUI::StylesHandler* mStyle;
-		Core::DataHandler* mDataHandler;
 
 		/* Various */
 		GUI::MessageBox* mMessageBox;

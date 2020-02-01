@@ -44,7 +44,6 @@ namespace Client
 		mPhysicsHandler = PhysicsHandler::instance();
 		mSceneHandler = SceneHandler::instance();
 		mStyle = GUI::StylesHandler::instance();
-		mDataHandler = Core::DataHandler::instance();
 
 
 		mEvent = &mInputHandler->getEvent();
@@ -64,9 +63,6 @@ namespace Client
 	{
 		delete mConfirmExitBox;
 		mConfirmExitBox = nullptr;
-
-		Core::DataHandler::release();
-		mDataHandler = nullptr;
 
 		GUI::StylesHandler::release();
 		mStyle = nullptr;

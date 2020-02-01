@@ -1,5 +1,6 @@
 #ifndef STYLESHANDLER_H
 #define STYLESHANDLER_H
+
 #include "GameObject.h"
 
 namespace GUI

@@ -19,44 +19,15 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\DataHandler.cpp" />
-    <ClCompile Include="src\Hero.cpp" />
-    <ClCompile Include="src\LadderMatch.cpp" />
-    <ClCompile Include="src\LadderSimulation.cpp" />
-    <ClCompile Include="src\LadderTeam.cpp" />
-    <ClCompile Include="src\Match.cpp" />
-    <ClCompile Include="src\Person.cpp" />
-    <ClCompile Include="src\Player.cpp" />
-    <ClCompile Include="src\PlayerAttributes.cpp" />
-    <ClCompile Include="src\ProTeam.cpp" />
-    <ClCompile Include="src\Simulation.cpp" />
-    <ClCompile Include="src\Team.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="src\DataHandler.h" />
-    <ClInclude Include="src\DataStructures.h" />
-    <ClInclude Include="src\Definitions.h" />
-    <ClInclude Include="src\Hero.h" />
-    <ClInclude Include="src\HeroData.h" />
-    <ClInclude Include="src\LadderMatch.h" />
-    <ClInclude Include="src\LadderSimulation.h" />
-    <ClInclude Include="src\LadderTeam.h" />
-    <ClInclude Include="src\Match.h" />
-    <ClInclude Include="src\Person.h" />
-    <ClInclude Include="src\Player.h" />
-    <ClInclude Include="src\PlayerAttributes.h" />
-    <ClInclude Include="src\PlayerData.h" />
-    <ClInclude Include="src\ProTeam.h" />
-    <ClInclude Include="src\Simulation.h" />
-    <ClInclude Include="src\Team.h" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\Commons\Commons.vcxproj">
       <Project>{b8b888c9-dc04-4d5f-b2bb-abe5174baa42}</Project>
     </ProjectReference>
     <ProjectReference Include="..\Framework\Framework.vcxproj">
       <Project>{13a75fe2-8ebc-45b4-ba7a-19cc906fc7df}</Project>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\AppCore.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>

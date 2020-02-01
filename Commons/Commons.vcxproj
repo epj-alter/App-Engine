@@ -19,31 +19,32 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\Button.cpp" />
-    <ClCompile Include="src\CheckButton.cpp" />
-    <ClCompile Include="src\ConfirmationBox.cpp" />
-    <ClCompile Include="src\Container.cpp" />
-    <ClCompile Include="src\DropDownList.cpp" />
-    <ClCompile Include="src\InputField.cpp" />
-    <ClCompile Include="src\MessageBox.cpp" />
-    <ClCompile Include="src\ProgressBar.cpp" />
-    <ClCompile Include="src\Scene.cpp" />
-    <ClCompile Include="src\SceneData.cpp" />
-    <ClCompile Include="src\Slider.cpp" />
+    <ClCompile Include="components\Button.cpp" />
+    <ClCompile Include="components\CheckButton.cpp" />
+    <ClCompile Include="components\ConfirmationBox.cpp" />
+    <ClCompile Include="components\Container.cpp" />
+    <ClCompile Include="components\DropDownList.cpp" />
+    <ClCompile Include="components\InputField.cpp" />
+    <ClCompile Include="components\MessageBox.cpp" />
+    <ClCompile Include="components\ProgressBar.cpp" />
+    <ClCompile Include="scenes\Scene.cpp" />
+    <ClCompile Include="scenes\SceneData.cpp" />
+    <ClCompile Include="components\Slider.cpp" />
     <ClCompile Include="src\StylesHandler.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\Button.h" />
-    <ClInclude Include="src\CheckButton.h" />
-    <ClInclude Include="src\ConfirmationBox.h" />
-    <ClInclude Include="src\Container.h" />
-    <ClInclude Include="src\DropDownList.h" />
-    <ClInclude Include="src\InputField.h" />
-    <ClInclude Include="src\MessageBox.h" />
-    <ClInclude Include="src\ProgressBar.h" />
-    <ClInclude Include="src\Scene.h" />
-    <ClInclude Include="src\SceneData.h" />
-    <ClInclude Include="src\Slider.h" />
+    <ClInclude Include="components\Button.h" />
+    <ClInclude Include="components\CheckButton.h" />
+    <ClInclude Include="components\ConfirmationBox.h" />
+    <ClInclude Include="components\Container.h" />
+    <ClInclude Include="components\DropDownList.h" />
+    <ClInclude Include="components\InputField.h" />
+    <ClInclude Include="components\MessageBox.h" />
+    <ClInclude Include="components\ProgressBar.h" />
+    <ClInclude Include="scenes\Scene.h" />
+    <ClInclude Include="scenes\SceneData.h" />
+    <ClInclude Include="components\Slider.h" />
+    <ClInclude Include="src\Commons.h" />
     <ClInclude Include="src\StylesHandler.h" />
   </ItemGroup>
   <ItemGroup>
@@ -62,13 +63,13 @@
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v142</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>v142</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
@@ -132,7 +133,8 @@
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>$(SolutionDir)Framework\src;$(SolutionDir)Dependencies\rapidjson-master\include\rapidjson;$(SolutionDir)Dependencies\SDL2_image-2.0.5\include;$(SolutionDir)Dependencies\SDL2_mixer-2.0.4\include;$(SolutionDir)Dependencies\SDL2_net-2.0.1\include;$(SolutionDir)Dependencies\SDL2_ttf-2.0.15\include;$(SolutionDir)Dependencies\SDL2-2.0.10\include</AdditionalIncludeDirectories>
-      <PrecompiledHeaderFile />
+      <PrecompiledHeaderFile>Commons.h</PrecompiledHeaderFile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -148,7 +150,8 @@
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>$(SolutionDir)Framework\src;$(SolutionDir)Dependencies\rapidjson-master\include\rapidjson;$(SolutionDir)Dependencies\SDL2_image-2.0.5\include;$(SolutionDir)Dependencies\SDL2_mixer-2.0.4\include;$(SolutionDir)Dependencies\SDL2_net-2.0.1\include;$(SolutionDir)Dependencies\SDL2_ttf-2.0.15\include;$(SolutionDir)Dependencies\SDL2-2.0.10\include</AdditionalIncludeDirectories>
-      <PrecompiledHeaderFile />
+      <PrecompiledHeaderFile>Commons.h</PrecompiledHeaderFile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -166,7 +169,8 @@
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>$(SolutionDir)Framework\src;$(SolutionDir)Dependencies\rapidjson-master\include\rapidjson;$(SolutionDir)Dependencies\SDL2_image-2.0.5\include;$(SolutionDir)Dependencies\SDL2_mixer-2.0.4\include;$(SolutionDir)Dependencies\SDL2_net-2.0.1\include;$(SolutionDir)Dependencies\SDL2_ttf-2.0.15\include;$(SolutionDir)Dependencies\SDL2-2.0.10\include</AdditionalIncludeDirectories>
-      <PrecompiledHeaderFile />
+      <PrecompiledHeaderFile>Commons.h</PrecompiledHeaderFile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -186,7 +190,8 @@
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>$(SolutionDir)Framework\src;$(SolutionDir)Dependencies\rapidjson-master\include\rapidjson;$(SolutionDir)Dependencies\SDL2_image-2.0.5\include;$(SolutionDir)Dependencies\SDL2_mixer-2.0.4\include;$(SolutionDir)Dependencies\SDL2_net-2.0.1\include;$(SolutionDir)Dependencies\SDL2_ttf-2.0.15\include;$(SolutionDir)Dependencies\SDL2-2.0.10\include</AdditionalIncludeDirectories>
-      <PrecompiledHeaderFile />
+      <PrecompiledHeaderFile>Commons.h</PrecompiledHeaderFile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
