@@ -2,15 +2,15 @@
 
 int main(int argc, char* argv[])
 {
-	Client::Client* game = Client::Client::Instance();
+	Client::Client* App = Client::Client::Instance();
 
-	srand(time(NULL)); //DEBUG
+	//srand(time(NULL)); //DEBUG
 
-	game->run();
+	App->run();
 
 	Client::Client::release();
 
-	game = nullptr;
+	App = nullptr;
 
 	return 0;
 }
