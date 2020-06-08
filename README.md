@@ -1,6 +1,10 @@
-# ENGINE
+# 2D SDL2 Engine
 
-Working on it.
+2D Engine with the help of SDL2 libraries
+
+
+Still a lot of work to do but it has already basic gui elements.
+* Working in progress *
 
 ## Libraries in use
 * SDL2 2.0.10
